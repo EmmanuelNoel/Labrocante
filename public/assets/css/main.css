@@ -20,7 +20,10 @@ body {
 #menuslateral ul li a i {
     font-size: 23px;
 }
-
+.active-page{
+    background-color: #2f45c6;
+    color: #1b2845;
+}
 #menuslateral ul {
     padding: 0;
 }
@@ -213,6 +216,7 @@ nav {
 /* bg-image */
 #bannierhome {
     height: 656px;
+    width: 100%;
 }
 #bannierhome .texte {
     align-content: center;

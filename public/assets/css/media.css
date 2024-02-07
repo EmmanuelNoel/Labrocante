@@ -110,6 +110,7 @@
     .navbarmenu .nav-link{
         background-color: transparent;
         color: black !important;
+        padding:0;
     }
     .deroulante{
         color: black;
@@ -121,9 +122,9 @@
         box-shadow: none;
         font-size: 25px;
     }
-    .navbarmenu{
+    /* .navbarmenu{
         align-items:end;
-    }
+    } */
     /* connexion */
     footer{
         border-radius: 0px;

@@ -16,10 +16,10 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg mx-lg-5 navbar-light ">
+            <nav class="navbar navbar-expand-lg navbar-light ">
                 <div class="container m-0">
                 <div class="d-flex">
-                    <a class="navbar-brand m-0" href="#">
+                    <a class="navbar-brand" href="#">
                         <img src="{{ asset('assets/images/Logo 1.png') }}" alt="Brocante" width="150" height="50">
                     </a>
                 </div>
