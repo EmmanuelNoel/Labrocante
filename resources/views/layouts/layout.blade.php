@@ -12,6 +12,7 @@
         <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/media.css') }}" rel="stylesheet">
         <script src="resources/js/brocante.js"></script>
+        @yield('css')
     </head>
     <body>
         <header>

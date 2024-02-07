@@ -8,6 +8,7 @@ use App\Mail\SendOtp;
 use Ichtrojan\Otp\Otp;
 use App\Models\OtpCode;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Providers\RouteServiceProvider;
 use Ichtrojan\Otp\Models\Otp as ModelsOtp;
@@ -34,8 +35,7 @@ class VerificationController extends Controller
         try {
             Mail::to($user->email)
                 ->send(new SendOtp($CodeOtp));
-                return redirect()->back();
-
+            return redirect()->back();
         } catch (\Exception $e) {
 
             throw ValidationException::withMessages(['email' => 'Erreur lors de l\'envoi du code OTP']);
@@ -54,7 +54,8 @@ class VerificationController extends Controller
             $identifier = ModelsOtp::where('token', $code)->first();
             if (!$identifier) {
                 return back()->with('status', 'Code incorrect');
-            } else {
+            }
+            else {
                 $otp = new Otp();
                 $identifier = $identifier->identifier;
                 $otpVerify =  $otp->validate($identifier, $code);
@@ -64,17 +65,24 @@ class VerificationController extends Controller
                     $user->email_verified_at = now();
                     $user->status = true;
                     $user->save();
+                 //   Auth::login($user);
+                    return redirect()->route('verificationSuccessfully');
                 }
 
-                else{
-                    return back()->with('status', '' .$otpVerify->message);
+                else {
+                    return back()->with('status', '' . $otpVerify->message);
                 }
             }
 
-            return redirect(RouteServiceProvider::HOME);
+
         } catch (Exception $e) {
             //   return $this->respondWithMessage('' . $e->getMessage());
             return back()->with('status', '' . $e->getMessage());
         }
+    }
+
+    public function verificationSuccessfully()
+    {
+        return view('otpVerification.sucessVerification');
     }
 }

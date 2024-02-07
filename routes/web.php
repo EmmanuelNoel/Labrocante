@@ -54,6 +54,7 @@ Route::get('home', function () {
 Route::get('/verify-otp/{id}', [VerificationController::class, 'showVerificationForm'])->name('verify-otp');
 Route::post('/validate-otp', [VerificationController::class, 'valideOtpCode'])->name('validate-otp');
 Route::get('/sendOtpCode/{id}', [VerificationController::class, 'sendOtpCode'])->name('sendOtpCode');
+Route::get('/verificationSuccessfully', [VerificationController::class, 'verificationSuccessfully'])->name('verificationSuccessfully');
 
 
 

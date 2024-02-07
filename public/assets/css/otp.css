@@ -1,0 +1,42 @@
+.section-center {
+
+
+    height: 80px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.section-center .finalVerification {
+    margin: 0 auto;
+}
+
+.verification-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 45px;
+    color: #274060;
+
+
+}
+
+.connexionButton {
+    background: #274060;
+    border-radius: 10px;
+    width: 250px;
+    height: 46px;
+}
+
+.connexionButtonText {
+
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFFFFF;
+
+
+}
