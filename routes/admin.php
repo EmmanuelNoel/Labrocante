@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\Auth\AuthController;
+use App\Http\Controllers\Admin\Auth\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +15,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::prefix('admin/')->group(function () {
+    Route::name('admin.')->group(function () {
+        Route::get('login', [\App\Http\Controllers\Admin\Auth\AuthController::class, 'showVerificationForm'])->name('login');
+        Route::post('login', [\App\Http\Controllers\Admin\Auth\AuthController::class, 'storeData'])->name('storeData');
+        Route::get('forgotPassword', [\App\Http\Controllers\Admin\Auth\AuthController::class, 'showforgotPasswordForm'])->name('forgotPassword');
+        Route::any('deconnexion', [AuthController::class, 'logout'])->name('logout');
+
+    });
+});
 
 
-
-
+Route::middleware(['acessDashboard'])->group(function () {
+Route::prefix('admin/')->group(function () {
+    Route::name('admin.')->group(function () {
+        Route::get('dashboard', [\App\Http\Controllers\Admin\Auth\HomeController::class, 'dashboard'])->name('dashboard');
+    });
+});
+});
