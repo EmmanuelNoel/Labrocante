@@ -1,9 +1,9 @@
 .section-center {
-
-
-    height: 80px;
     display: block;
     position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -35,8 +35,12 @@
 
     font-style: normal;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 18px;
     color: #FFFFFF;
 
 
+}
+
+.connexionButtonText:hover {
+    color: #FFFFFF;
 }

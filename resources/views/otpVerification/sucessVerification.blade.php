@@ -21,9 +21,11 @@
             </div>
             <div class=" text-center">
                 <button class="connexionButton">
-                    <span class="connexionButtonText">
+
+                      <a class="connexionButtonText" href="{{ route('login') }}">
                         Se connecter
-                    </span>
+                      </a>
+                   
                 </button>
 
             </div>
