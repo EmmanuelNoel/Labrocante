@@ -16,30 +16,14 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <div class="container">
+            <nav class="navbar navbar-expand-lg mx-lg-5 navbar-light ">
+                <div class="container m-0">
                 <div class="d-flex">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand m-0" href="#">
                         <img src="{{ asset('assets/images/Logo 1.png') }}" alt="Brocante" width="150" height="50">
                     </a>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="mx-auto my-auto d-none d-sm-flex search-item">
-                    <div class="dropdown">
-                        <div class="dropdown-icon dropdown-toggle" id="dropdown-icon" data-bs-toggle="dropdown" aria-expanded="false" >
-                        Article</div>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Femmes</a></li>
-                        <li><a class="dropdown-item" href="#">Hommes</a></li>
-                        <li><a class="dropdown-item" href="#">Enfants</a></li>
-                        </ul>
-                    </div>
-                    <div class="vertical-line"></div>
                     <div class="search-icon">
                         <i class="bi bi-search"></i>
                     </div>
@@ -47,13 +31,13 @@
                     <input  type="search" placeholder="Faire une recherche..." aria-label="Search">
                     </div>
                 </div>
-                <ul class="navbar-nav navbarmenu d-flex ms-auto">
-                    <li class="nav-item me-3 me-lg-1 active">
+                <ul class="navbar-nav navbarmenu d-flex ms-auto m-0">
+                    <li class="nav-item  me-lg-5 active">
                         <a class="nav-link icons" href="#">
                           <span><i class="bi bi-bag"></i></span>
                         </a>
                     </li>
-                    <li class="nav-item me-3 me-lg-1 active">
+                    <li class="nav-item  me-lg-5 active">
                         <a class="nav-link icons" href="#">
                           <span><i class="bi bi-bell"></i></span>
                         </a>
@@ -71,7 +55,7 @@
                     @endauth
                     @guest
                     <li class="nav-item">
-                        <a class="nav-link inscrire" href="{{ route('bienvenue') }}">S'inscrire&nbsp;<i class="bi bi-person-circle"></i></a>
+                        <a class="nav-link inscrire" href="{{ route('bienvenue') }}"><i class="bi bi-person-circle"></i>&nbsp;S'inscrire</a>
                     </li>
                     @endguest
                     {{-- <li class="nav-item">
@@ -98,7 +82,6 @@
                         </div>
                     </li> --}}
                 </ul>
-              </div>
             </div>
         </nav>
         </header>

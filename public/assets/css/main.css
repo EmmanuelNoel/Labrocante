@@ -4,6 +4,84 @@ body {
     font-family: Inria Sans;
     width: 100%;
 }
+/* menuslateral */
+#conteneur {
+    overflow: hidden;
+    height: 670px;
+    display: flex;
+}
+#menuslateral {
+    height: 656px;
+    width: 70px;
+    z-index: 999;
+    transition: all 0.5s ease-in;
+    position: relative;
+}
+#menuslateral ul li a i {
+    font-size: 23px;
+}
+
+#menuslateral ul {
+    padding: 0;
+}
+#menuslateral li {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0 100px 100px 0;
+    padding-right: 0px;
+}
+#menuslateral li:first-child {
+    margin-top: 8px;
+}
+#menuslateral li a i {
+    background: #fff;
+    border-radius: 100%;
+    padding: 13px;
+    color: #1b2845;
+    margin-left: 10px;
+}
+#menuslateral li:nth-child(2),
+#menuslateral li:nth-child(3),
+#menuslateral li:nth-child(4),
+#menuslateral li:nth-child(5),
+#menuslateral li:nth-child(6),
+#menuslateral li:nth-child(7) {
+    margin-top: 15px;
+}
+#menuslateral li:hover {
+    background-color: #2f45c6;
+    transition: all 0.3s ease-in;
+}
+/* Data title */
+/* Sélectionne tous les éléments avec un attribut title */
+[data-title] {
+    position: relative;
+    cursor: pointer; /* Optionnel : Curseur indiquant que l'élément a une information supplémentaire */
+}
+
+/* Ajoute un pseudo-élément ::after pour afficher le texte du titre */
+[data-title]::after {
+    content: attr(data-title);
+    position: absolute;
+    top: 125%; /* Place le texte en dessous de l'élément */
+    left: 70%;
+    transform: translateX(-50%);
+    padding: 8px;
+    background-color: #2f45c6; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border-radius: 4px; /* Coins arrondis */
+    white-space: nowrap; /* Empêche le texte de se diviser sur plusieurs lignes */
+    opacity: 0; /* Initialise l'opacité à 0 pour le cacher par défaut */
+    transition: opacity 0.3s ease; /* Ajoute une transition pour une apparition en douceur */
+    width: auto;
+    z-index: 99;
+    font-size: 13px;
+}
+/* Fait apparaître le texte du titre au survol */
+[data-title]:hover::after {
+    opacity: 1;
+}
 
 /* Navigation barre */
 li {
@@ -15,7 +93,6 @@ a {
 }
 
 nav {
-    box-shadow: 0px 2px 0px 0px black;
     text-align: center;
     background-color: white;
 }
@@ -23,7 +100,7 @@ nav {
 .search-item {
     display: flex;
     align-items: center;
-    background-color: #F4F4F4;
+    background-color: #f4f4f4;
     border-radius: 20px;
     width: 500px;
     margin: 0 auto;
@@ -39,16 +116,30 @@ nav {
 .vertical-line {
     width: 2px;
     height: 30px;
-    background-color: #AAAAAA;
+    background-color: #aaaaaa;
 }
 
 .search-box input {
     border: none;
     outline: none;
     border-radius: 5px;
-    background-color: #F4F4F4;
+    background-color: #f4f4f4;
 }
-
+.navbarmenu {
+    flex-direction: row;
+}
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
 .liens,
 .navbarmenu .nav-link {
     color: white !important;
@@ -58,7 +149,7 @@ nav {
     padding: 5px 20px;
 }
 
-.navbarmenu .icons i{
+.navbarmenu .icons i {
     font-weight: 800;
     font-size: 18px;
 }
@@ -68,22 +159,22 @@ nav {
 }
 
 #navbarNav .navbarmenu li a {
-    box-shadow: 0px 4px 4px 0px #D9D9D9;
+    box-shadow: 0px 4px 4px 0px #d9d9d9;
     text-align: center;
     margin-left: 1rem;
     width: max-content;
 }
 .navbarmenu .icons {
     border-radius: 50%;
-    background-color: #F4F4F4;
-    color:#274060 !important;
-    box-shadow: none!important;
+    background-color: #f4f4f4;
+    color: #274060 !important;
+    box-shadow: none !important;
 }
 
 .deroulante {
     font-size: 40px;
     margin-left: 3rem;
-    color: #FABC01;
+    color: #fabc01;
     font-weight: bold;
     margin-top: 5px;
 }
@@ -97,7 +188,7 @@ nav {
 }
 
 .offcanvas-header button {
-    color: #FABC01 !important;
+    color: #fabc01 !important;
 }
 
 .offcanvas-body .category-list li {
@@ -120,25 +211,25 @@ nav {
 }
 
 /* bg-image */
-#bannierhome{
+#bannierhome {
     height: 656px;
 }
-#bannierhome .texte{
-align-content: center;
-align-items: center;
+#bannierhome .texte {
+    align-content: center;
+    align-items: center;
 }
 #bannierhome h1 {
-    font-family: 'Agency FB';
+    font-family: "Agency FB";
     font-style: normal;
     font-weight: 700;
     font-size: 35px;
     line-height: 66px;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 #bannierhome a {
     border-radius: 100px;
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -146,10 +237,8 @@ align-items: center;
     padding: 10px 25px;
     background: #274060;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: #FFFFFF;
+    color: #ffffff;
 }
-
-
 
 /* Bannierhome */
 
@@ -157,14 +246,10 @@ align-items: center;
     height: 700px;
 }
 
-
-
-
 /* Produits */
 .line {
     /* left: calc(50% - 1406px/2); */
     border: 2px solid #274060;
-
 }
 
 .produits {
@@ -174,7 +259,7 @@ align-items: center;
 }
 
 .produits h2 {
-    font-family: 'Agency FB';
+    font-family: "Agency FB";
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
@@ -205,7 +290,6 @@ align-items: center;
     position: relative;
 }
 
-
 .square img {
     width: 100%;
     height: 100%;
@@ -220,11 +304,11 @@ align-items: center;
 }
 
 .produit .info h1 {
-    font-family: 'Inria Sans';
+    font-family: "Inria Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    color: #22577A;
+    color: #22577a;
 }
 
 .produit .info h1 img {
@@ -233,21 +317,21 @@ align-items: center;
 }
 
 .produit .info p {
-    font-family: 'Inria Sans';
+    font-family: "Inria Sans";
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    color: #22577A;
+    color: #22577a;
     line-height: 24px;
 }
 
 .produit .info h3 {
-    font-family: 'Inria Sans';
+    font-family: "Inria Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
     line-height: 29px;
-    font-feature-settings: 'liga' off, 'kern' off;
+    font-feature-settings: "liga" off, "kern" off;
     color: #274060;
 }
 
@@ -264,7 +348,7 @@ align-items: center;
     width: 24px;
     height: 20px;
     border-radius: 50%;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
 }
 
 .grid-container {
@@ -276,7 +360,7 @@ align-items: center;
 }
 
 .suggestion {
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-size: 20px;
     font-weight: 700;
     line-height: 31px;
@@ -293,24 +377,23 @@ align-items: center;
 }
 
 .seemore h2 {
-    font-family: 'Agency FB';
+    font-family: "Agency FB";
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
     line-height: 70px;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .seemore p {
-    font-family: 'DM Sans' !important;
+    font-family: "DM Sans" !important;
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
     color: white;
     letter-spacing: 0em;
     text-align: center;
-
 }
 
 .seemore .newsletters {
@@ -330,13 +413,13 @@ align-items: center;
 }
 
 .seemore .newsletters span a {
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
     line-height: 32px;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .seemore .newsletters input {
@@ -345,17 +428,15 @@ align-items: center;
     border-radius: 50px;
 }
 
-
 /* detailproduit */
 .ficheproduit {
     margin-top: 100px;
-
 }
 
 .imgproduits {
     height: 500px;
     border-radius: 7px;
-    box-shadow: 1px 1px 2px 2px #D9D9D9;
+    box-shadow: 1px 1px 2px 2px #d9d9d9;
     position: relative;
     overflow: hidden;
 }
@@ -389,11 +470,11 @@ box-shadow: 10px 10px 20px #D9D9D9;
 
 /* carrousel */
 @media (max-width: 767px) {
-    .carousel-inner .carousel-item>div {
+    .carousel-inner .carousel-item > div {
         display: none;
     }
 
-    .carousel-inner .carousel-item>div:first-child {
+    .carousel-inner .carousel-item > div:first-child {
         display: block;
     }
 }
@@ -406,7 +487,6 @@ box-shadow: 10px 10px 20px #D9D9D9;
 
 /* medium and up screens */
 @media (min-width: 768px) {
-
     .carousel-inner .carousel-item-end.active,
     .carousel-inner .carousel-item-next {
         transform: translateX(25%);
@@ -424,21 +504,21 @@ box-shadow: 10px 10px 20px #D9D9D9;
 }
 
 .actionproduit a {
-    font-family: 'Inria Sans';
+    font-family: "Inria Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 38px;
-    box-shadow: 0px 4px 4px 0px #D9D9D9;
+    box-shadow: 0px 4px 4px 0px #d9d9d9;
     border-radius: 3px !important;
 }
 
 .infodetail h1 {
-    font-family: 'Inria Sans';
+    font-family: "Inria Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 25px;
-    color: #22577A;
+    color: #22577a;
 }
 
 .detailproduit {
@@ -460,16 +540,16 @@ box-shadow: 10px 10px 20px #D9D9D9;
 .infodetail h3 {
     font-size: 28px;
     font-weight: 700;
-    color: #FABC01;
+    color: #fabc01;
 }
 
 .infocontainer {
     width: auto;
     height: 500px;
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
     padding: 10px 20px 10px 20px;
     display: flex;
-    box-shadow: 0px 4px 4px 0px #D9D9D9;
+    box-shadow: 0px 4px 4px 0px #d9d9d9;
     margin-top: 30px;
     margin-left: 20%;
 }
@@ -480,7 +560,7 @@ box-shadow: 10px 10px 20px #D9D9D9;
 }
 
 .info-item h5 {
-    color: #FABC01;
+    color: #fabc01;
     padding-top: 7px;
 }
 
@@ -492,7 +572,7 @@ box-shadow: 10px 10px 20px #D9D9D9;
 
 /* panier */
 .panier .card {
-    box-shadow: 10px 10px 20px #D9D9D9;
+    box-shadow: 10px 10px 20px #d9d9d9;
     border: none;
 }
 
@@ -569,7 +649,7 @@ footer .row a {
 .social-icons a {
     margin: 0 10px;
     color: white;
-    font-size: 24px
+    font-size: 24px;
 }
 
 .linefooter .line {
@@ -577,8 +657,8 @@ footer .row a {
 }
 
 /* bienvenue.blade.php */
-#connexionpage{
-    background: url('../images/Unionbackground.png') no-repeat;
+#connexionpage {
+    background: url("../images/Unionbackground.png") no-repeat;
     background-size: cover;
     height: 90vh; /* Utilisez la hauteur de la vue (viewport height) pour s'assurer qu'elle couvre toute la fenêtre visible */
     display: flex;
@@ -586,30 +666,33 @@ footer .row a {
     justify-content: center;
 }
 .connexion,
-.usernameconfirm,.otpconfirm {
+.usernameconfirm,
+.otpconfirm {
     width: 25%;
     padding: 20px;
     margin: 0 auto;
     text-align: center;
     box-sizing: border-box;
-    background: #FFFFFF;
-    border: 1px solid #AAAAAA;
+    background: #ffffff;
+    border: 1px solid #aaaaaa;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 }
-.usernameconfirm,.otpconfirm{
+.usernameconfirm,
+.otpconfirm {
     width: 35%;
 }
-.otpconfirm .prompt p{
-    font-family: 'Inria Sans';
+.otpconfirm .prompt p {
+    font-family: "Inria Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
 }
-.usernameconfirm input{
+.usernameconfirm input {
     outline: none;
-  }
-.otpconfirm button, .usernameconfirm button{
+}
+.otpconfirm button,
+.usernameconfirm button {
     background-color: #274060;
     color: white;
     font-style: normal;
@@ -619,54 +702,56 @@ footer .row a {
     border-radius: 10px;
     padding: 5px 10px;
 }
-.connexion h2,.usernameconfirm h2{
-    font-family: 'Inria Sans';
+.connexion h2,
+.usernameconfirm h2 {
+    font-family: "Inria Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 48px;
-    color: #22577A;
-
+    color: #22577a;
 }
 .connexion p {
     box-sizing: border-box;
     width: auto;
-    border: 1px solid #AAAAAA;
+    border: 1px solid #aaaaaa;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 20px;
     background-color: white;
     padding: 5px 0px;
-    box-shadow: 0px 0px 4px #AAAAAA;
+    box-shadow: 0px 0px 4px #aaaaaa;
 }
 
 .connexion p a {
-    font-family: 'Inria Sans';
+    font-family: "Inria Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 29px;
-    color: #22577A;
+    color: #22577a;
 }
 
-.connexion h5,.usernameconfirm p,.usernameconfirm .sesouvenir label{
-font-family: 'Inria Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 24px;
-color: #22577A;
+.connexion h5,
+.usernameconfirm p,
+.usernameconfirm .sesouvenir label {
+    font-family: "Inria Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #22577a;
 }
-.usernameconfirm .sesouvenir label{
+.usernameconfirm .sesouvenir label {
     line-height: 10px;
 }
-.usernameconfirm .sesouvenir input{
-    border: 1.5px solid #22577A;
+.usernameconfirm .sesouvenir input {
+    border: 1.5px solid #22577a;
     width: 20px;
     height: 20px;
     margin-right: 5px;
 }
-.connexion h5 a{
-color: #1877F2;
+.connexion h5 a {
+    color: #1877f2;
 }
 
 .stage-container {
@@ -708,7 +793,7 @@ h2 {
 }
 
 .form-check-label a {
-    color: #FABC01;
+    color: #fabc01;
 }
 /* Verification styles */
 
@@ -719,20 +804,20 @@ h2 {
     gap: 30px;
     align-items: center;
     justify-content: center;
-  }
-  .otp-wrapper input:focus {
+}
+.otp-wrapper input:focus {
     outline: none;
-  }
-  .otp-wrapper input {
+}
+.otp-wrapper input {
     width: 40px;
     height: 40px;
     line-height: 40px;
     text-align: center;
-    border:1px solid #000000;
+    border: 1px solid #000000;
     border-radius: 8px;
     background-color: #ffffff;
     color: #000000;
-  }
-  .otp-wrapper input::placeholder {
-    color: #ffffff50
-  }
+}
+.otp-wrapper input::placeholder {
+    color: #ffffff50;
+}
