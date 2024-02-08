@@ -17,7 +17,7 @@ use App\Http\Controllers\VerificationController;
 
 Route::get('/', function () {
     return view('home');
-})->name('home');
+})->name('accueil');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -31,7 +31,7 @@ Route::get('bienvenue', function () {
     return view('bienvenue');
 })->name('bienvenue');
 Route::get('detailproduit', function () {
-    return view('detailproduit');
+    return view('produits.detailproduit');
 })->name('detailproduit');
 Route::get('suggestion', function () {
     return view('suggestion');

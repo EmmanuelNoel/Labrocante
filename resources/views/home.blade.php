@@ -6,7 +6,7 @@
             <!-- Home -->
             <li><a href="" onclick="setpagesactive('Accueil')"><i class="fas fa-home" data-title="Accueil"></i></a></li> 
             <!-- Produits / Services -->
-            <li><a href="" onclick="setpagesactive('produit')"><i class="fa-solid fa-bag-shopping" data-title="Produit"></i></a></li>
+            <li><a href="{{route('detailproduit')}}" onclick="setpagesactive('produit')"><i class="fa-solid fa-bag-shopping" data-title="Produit"></i></a></li>
             <!-- Nouveautés  -->
             <li><a href="" onclick="setpagesactive('nouveaux')"><i class="fa-solid fa-newspaper" data-title="Nouveautés"></i></a></li>
              <!-- Promotions / Offres spéciales  -->
@@ -21,7 +21,7 @@
             <li class="d-none d-lg-block "><a  href="{{ route('bienvenue') }}" onclick="setpagesactive('connexion')"><i class="fa-solid fa-user" data-title="S'inscrire"></i></a></li>        
         </ul>
     </section>
-    <section id="bannierhome" class="col-md-11 p-0 d-flex align-items-center justify-content-center" style="background:url('{{ asset('assets/images/Union.png')}}') no-repeat; background-size:cover">
+    <section id="bannierhome" class="col-md-11 p-0 d-flex align-items-center justify-content-center" style="background:url('/public/assets/images/Union.png-') no-repeat; background-size:cover">
         <div class="text-center texte ">
             <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h1>
             <a href="">S'inscrire</a>
