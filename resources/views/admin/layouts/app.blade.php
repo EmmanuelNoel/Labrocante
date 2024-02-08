@@ -26,69 +26,20 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('admin_assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('admin_assets/vendor/bootstrap-fileinput/css/fileinput.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin_assets/vendor/summernote/summernote-bs4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin_assets/css/custom.css') }}">
+
+    <style>
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+
+    @yield('styles')
 
     <!-- Scripts -->
 </head>
-
-{{-- <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div> --}}
 
 <body id="page-top">
 
@@ -96,7 +47,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-       @include('admin.partials._sidebar')
+        @include('admin.partials._sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -106,18 +57,18 @@
             <div id="content">
 
                 <!-- Topbar -->
-               @include('admin.partials._header')
+                @include('admin.partials._header')
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-              @yield('content')
+                @yield('content')
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
-          @include('admin.partials._footer')
+            @include('admin.partials._footer')
             <!-- End of Footer -->
 
         </div>
@@ -145,7 +96,13 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">Logout</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -168,6 +125,19 @@
     <script src="js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('admin_assets/js/demo/chart-pie-demo.js') }}"></script>
 
+
+    <script src="{{ asset('admin_assets/js/app.js') }}"></script>
+    <script src="{{ asset('backend/js/sb-admin-2.min.js') }}"></script>
+    <script src="{{ asset('admin_assets/js/custom.js') }}"></script>
+    <!-- file input -->
+    <script src="{{ asset('admin_assets/vendor/bootstrap-fileinput/js/plugins/piexif.min.js') }}"></script>
+    <script src="{{ asset('admin_assets/vendor/bootstrap-fileinput/js/plugins/sortable.min.js') }}"></script>
+    <script src="{{ asset('admin_assets/vendor/bootstrap-fileinput/js/fileinput.min.js') }}"></script>
+    <script src="{{ asset('admin_assets/vendor/bootstrap-fileinput/themes/fas/theme.min.js') }}"></script>
+    <!-- summernote -->
+    <script src="{{ asset('admin_assets/vendor/summernote/summernote-bs4.min.js') }}"></script>
+
+    @yield('scripts')
 
 </body>
 

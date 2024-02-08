@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nom');
             $table->string('slug');
             $table->string('description');
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }
