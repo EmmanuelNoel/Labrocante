@@ -12,6 +12,8 @@
         <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/media.css') }}" rel="stylesheet">
         <script src="resources/js/brocante.js"></script>
+<script src="https://kit.fontawesome.com/3a537738e0.js" crossorigin="anonymous"></script>
+
         @yield('css')
     </head>
     <body>
@@ -19,7 +21,7 @@
             <nav class="navbar navbar-expand-lg navbar-light ">
                 <div class="container m-0">
                 <div class="d-flex valgueris">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{{route('home')}}">
                         <img src="{{ asset('assets/images/Logo 1.png') }}" alt="Brocante" width="150" height="50">
                     </a>
                 </div>
@@ -40,6 +42,11 @@
                     <li class="nav-item mx-4 offset-md-8 me-lg-5 active">
                         <a class="nav-link icons" href="#">
                           <span><i class="bi bi-bell"></i></span>
+                        </a>
+                    </li>
+                    <li class="nav-item mx-4 d-lg-none  offset-md-8 me-lg-5 active">
+                        <a class="nav-link icons" href="{{ route('bienvenue') }}">
+                          <span><i class="fa-regular fa-user"></i></span>
                         </a>
                     </li>
                     @auth

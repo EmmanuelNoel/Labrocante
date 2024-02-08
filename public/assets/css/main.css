@@ -155,6 +155,45 @@ nav {
     .valgueris {
         margin-left: -10px;
     }
+    #menuslateral ul li a i {
+        font-size: 19px;
+    }
+    #menuslateral{
+        width: 60px;
+    }
+}
+@media screen and (width:991px) {
+    .valgueris {
+        margin-left: -200px;
+    }
+    #menuslateral ul li a i {
+        font-size: 19px;
+    }
+    #menuslateral{
+        width: 60px;
+    }
+}
+@media screen and (width:509px) {
+    .valgueris {
+        margin-left: 33px;
+    }
+    #menuslateral ul li a i {
+        font-size: 19px;
+    }
+    #menuslateral{
+        width: 60px;
+    }
+}
+@media screen and (width:991px) {
+    .valgueris {
+        margin-left: -200px;
+    }
+    #menuslateral ul li a i {
+        font-size: 19px;
+    }
+    #menuslateral{
+        width: 60px;
+    }
 }
 @media screen and (width:375px) {
     .valgueris {

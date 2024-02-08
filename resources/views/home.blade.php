@@ -18,7 +18,7 @@
             <!-- Support -->
             <li><a href="" onclick="setpagesactive('support')"><i class="fas fa-question-circle" data-title="Support"></i></a></li>
             <!-- Login -->
-            <li><a  href="{{ route('bienvenue') }}" onclick="setpagesactive('connexion')"><i class="fa-solid fa-user" data-title="S'inscrire"></i></a></li>        
+            <li class="d-none d-lg-block "><a  href="{{ route('bienvenue') }}" onclick="setpagesactive('connexion')"><i class="fa-solid fa-user" data-title="S'inscrire"></i></a></li>        
         </ul>
     </section>
     <section id="bannierhome" class="col-md-11 p-0 d-flex align-items-center justify-content-center" style="background:url('{{ asset('assets/images/Union.png')}}') no-repeat; background-size:cover">
