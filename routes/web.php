@@ -31,7 +31,7 @@ Route::get('bienvenue', function () {
     return view('bienvenue');
 })->name('bienvenue');
 Route::get('detailproduit', function () {
-    return view('detailproduit');
+    return view('produits.detailproduit');
 })->name('detailproduit');
 Route::get('suggestion', function () {
     return view('suggestion');

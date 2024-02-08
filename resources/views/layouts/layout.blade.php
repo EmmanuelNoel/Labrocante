@@ -55,7 +55,7 @@
                     @endauth
                     @guest
                     <li class="nav-item">
-                        <a class="nav-link inscrire" href="{{ route('bienvenue') }}"><i class="bi bi-person-circle"></i>&nbsp;S'inscrire</a>
+                        <a class="nav-link inscrire" href="{{ route('bienvenue') }}">S'inscrire&nbsp;<i class="bi bi-person-circle"></i></a>
                     </li>
                     @endguest
                     {{-- <li class="nav-item">

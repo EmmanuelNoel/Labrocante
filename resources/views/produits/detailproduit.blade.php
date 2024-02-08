@@ -1,11 +1,11 @@
 @extends('layouts.layout')
 @section('content')
-    <div class="ficheproduit">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5  infoproduit">
+    <div class="ficheproduit container">
+        <section>
+            <div class="d-flex">
+                <div class="infoproduit">
                     <div class="imgproduits ">
-                        <img src="{{ asset('assets/images/image7.jpg') }}" alt="Stage 1">
+                        <img src="{{ asset('assets/images/image1.jpg') }}" alt="Stage 1">
                     </div>
                     {{-- <div class="row mx-auto my-auto justify-content-center">
                         <div id="recipeCarousel" class="mt-5 carousel slide" data-bs-ride="carousel">
@@ -60,14 +60,15 @@
                         </div>
                     </div> --}}
                     <div class="text-center">
-                        <div class=" mt-5 row">
+                        <div class=" mt-3 row">
                             <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner" role="listbox">
                                     <div class="carousel-item active">
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
-                                                    <img src="https://via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                                                    <img src="{{ asset('assets/images/image4.png') }}"
+                                                    alt="Image 3" class="img-fluid">
                                                 </div>
                                             </div>
                                         </div>
@@ -76,7 +77,8 @@
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
-                                                    <img src="https://via.placeholder.com/500x400/e66?text=2" class="img-fluid">
+                                                    <img src="{{ asset('assets/images/image4.png') }}"
+                                                    alt="Image 3" class="img-fluid">
                                                 </div>
                                             </div>
                                         </div>
@@ -85,7 +87,8 @@
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
-                                                    <img src="https://via.placeholder.com/500x400/7d2?text=3" class="img-fluid">
+                                                    <img src="{{ asset('assets/images/image4.png') }}"
+                                                    alt="Image 3" class="img-fluid">
                                                 </div>
                                             </div>
                                         </div>
@@ -94,7 +97,8 @@
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
-                                                    <img src="https://via.placeholder.com/500x400?text=4" class="img-fluid">
+                                                    <img src="{{ asset('assets/images/image4.png') }}"
+                                                    alt="Image 3" class="img-fluid">
                                                 </div>
                                             </div>
                                         </div>
@@ -103,7 +107,8 @@
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
-                                                    <img src="https://via.placeholder.com/500x400/aba?text=5" class="img-fluid">
+                                                    <img src="{{ asset('assets/images/image4.png') }}"
+                                                    alt="Image 3" class="img-fluid">
                                                 </div>
                                             </div>
                                         </div>
@@ -112,7 +117,8 @@
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
-                                                    <img src="https://via.placeholder.com/500x400/fc0?text=6" class="img-fluid">
+                                                    <img src="{{ asset('assets/images/image4.png') }}"
+                                                    alt="Image 3" class="img-fluid">
                                                 </div>
                                             </div>
                                         </div>
@@ -126,157 +132,57 @@
                                 </a>
                             </div>
                         </div>
-                      </div>
-                    <div class="actionproduit mt-5">
-                        <a href="" class="liens me-4">Acheter</a>
-                        <a href="" class="liens ms-5 me-3">Faire une offre</a>
-                        <a href="" class="liens ms-5 ">Message</a>
                     </div>
                 </div>
-                <div class="col-lg-7 infodetail ">
-                    <div class="row">
-                        <div class="detailproduit ">
-                            <h1>Nom produit</h1>
-                            <span><i class="bi bi-heart me-4" style="color:#D84545"></i><i class="bi bi-cart-dash-fill ms-5" style="color:#FABC01"></i></span>
-                            <h3>25000 FCFA</h3>
-                            <h1><span class="bi bi-circle" style="color: rgb(194, 190, 190);">&nbsp;&nbsp;&nbsp;</span>Nom
-                                du
-                                vendeur</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet provident est, delectus rerum
-                                repellat
-                                dolor alias maxime pariatur minus veritatis a ex, dolorem perferendis, quibusdam minima.
-                                Officia ab
-                                nobis modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. A unde maiores modi
-                                temporibus
-                                id nihil excepturi voluptas, tenetur vero. Quod illo nisi ex quaerat atque, impedit sint
-                                harum fugit
-                                delectus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, corporis velit.
-                                Nam
-                                repudiandae veniam repellendus alias libero itaque. Quo laudantium ducimus labore numquam
-                                unde
-                                suscipit blanditiis repudiandae nemo id nobis.Lorem ipsum dolor, sit amet consectetur
-                                adipisicing
-                                elit. Eveniet, corporis velit. Nam repudiandae veniam repellendus alias libero itaque. Quo
-                                laudantium ducimus labore numquam unde suscipit blanditiis repudiandae nemo id nobis. </p>
-                            <div class="line"></div>
+                <div class=" infodetail ms-auto">
+                    <h1>Nom du service</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet provident est, delectus rerum
+                        repellat
+                        dolor alias maxime pariatur minus veritatis a ex, dolorem perferendis, quibusdam minima.
+                        Officia ab
+                        nobis modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. A unde maiores modi
+                        temporibus
+                        id nihil excepturi voluptas, tenetur vero. Quod illo nisi ex quaerat atque, impedit sint
+                        harum fugit
+                        delectus. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    </p>
+                    <p class="tarifunique">Tarif unique de</p>
+                    <div class="d-flex prix">
+                        <h3>25000 FCFA</h3>
+                        <div class="d-flex icone ms-auto">
+                            <H3><i class="bi bi-heart me-5" style="color: #D84545"></i></H3>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="infocontainer">
-                            <div class="info-item">
-                                <h5>Marque</h5>
-                                <h5>Dimension</h5>
-                                <h5>Taille</h5>
-                                <h5>Etat</h5>
-                                <h5>Matiere</h5>
-                                <h5>Couleur</h5>
-                                <h5>Localisation</h5>
-                                <h5>Personne interessée</h5>
-                                <h5>Ajoutée </h5>
-                            </div>
-                            <div class="dashes">
-                                <h5>------------------------------</h5>
-                                <h5>---------------</h5>
-                                <h5>--------</h5>
-                                <h5>--------</h5>
-                                <h5>--------</h5>
-                                <h5>-------</h5>
-                                <h5>--------</h5>
-                                <h5>--------</h5>
-                                <h5>il y a -----</h6>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="line"></div>
+                    <span class="liens"><a href="" >Acheter</a></span>
                 </div>
             </div>
-        </div>
-    <div class="produits container">
-        <h1><b>Fil d'actualité</b></h1>
-        <div class="line"></div>
-        <br>
-        <div class="grid-container ">
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href="{{ route('detailproduit') }}"><img src="{{ asset('assets/images/image1.jpg') }}" alt="reussite 1"></a>
+        </section>
+        <section class="description_service">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hendrerit gravida rutrum quisque non tellus orci. Arcu bibendum at varius vel pharetra vel turpis. Ut etiam sit amet nisl purus in mollis. Diam in arcu cursus euismod quis viverra. Pellentesque sit amet porttitor eget dolor morbi non arcu. Vulputate dignissim suspendisse in est ante. Urna et pharetra pharetra massa massa. Sed elementum tempus egestas sed sed risus. Gravida quis blandit turpis cursus in. Gravida neque convallis a cras semper auctor neque vitae tempus. Convallis tellus id interdum velit laoreet id. Odio morbi quis commodo odio aenean sed adipiscing. Libero id faucibus nisl tincidunt. Massa enim nec dui nunc. Lectus sit amet est placerat. Scelerisque mauris pellentesque pulvinar pellentesque. Quis ipsum suspendisse ultrices gravida dictum fusce. Urna id volutpat lacus laoreet non curabitur gravida.</p>
+        </section>
+        <section class="apercu">
+            <h2>Apercu</h2>
+            <img src="{{ asset('assets/images/image7.jpg') }}" alt="Stage 1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hendrerit gravida rutrum quisque non tellus orci. Arcu bibendum at varius vel pharetra vel turpis. Ut etiam sit amet nisl purus in mollis. Diam in arcu cursus euismod quis viverra. Pellentesque sit amet porttitor eget dolor morbi non arcu. Vulputate dignissim suspendisse in est ante. Urna et pharetra pharetra massa massa. Sed elementum tempus egestas sed sed risus. Gravida quis blandit turpis cursus in. Gravida neque convallis a cras semper auctor neque vitae tempus. Convallis tellus id interdum velit laoreet id. Odio morbi quis commodo odio aenean sed adipiscing. Libero id faucibus nisl tincidunt. Massa enim nec dui nunc. Lectus sit amet est placerat. Scelerisque mauris pellentesque pulvinar pellentesque. Quis ipsum suspendisse ultrices gravida dictum fusce. Urna id volutpat lacus laoreet non curabitur gravida.</p>
+        </section>
+        <section class="aproposvendeur">
+            <h2>Message du créateur</h2>
+            <div class="row">
+                <div class="col-3 d-flex align-items-center">
+                    <img src="{{ asset('assets/images/image2.jpg') }}" alt="">
+                    <div class="infovendeur d-block">
+                        <h3>Nom vendeur</h3>
+                        <p>Site vendeur</p>
                     </div>
-                    <div class="d-flex info">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                            <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1>
-                        </div>
-                        <div class="ms-auto">
-                            <H1><i class="bi bi-heart " style="color:#D84545;"></i></H1>
-                            <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
-                        </div>
-                    </div>
+                <div class="verticalline ms-auto me-3"></div>
+                </div>
+                <div class="col-9 textevendeur">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hendrerit gravida rutrum quisque non tellus orci. Arcu bibendum at varius vel pharetra vel turpis. Ut etiam sit amet nisl purus in mollis. Diam in arcu cursus euismod quis viverra. Pellentesque sit amet porttitor eget dolor morbi non arcu. Vulputate dignissim suspendisse in est ante. Urna et pharetra pharetra massa massa. Sed elementum tempus egestas sed sed risus. Gravida quis blandit turpis cursus in. Gravida neque convallis a cras semper auctor neque vitae tempus. Convallis tellus id interdum velit laoreet id. Odio morbi quis commodo odio aenean sed adipiscing. Libero id faucibus nisl tincidunt. Massa enim nec dui nunc. Lectus sit amet est placerat. Scelerisque mauris pellentesque pulvinar pellentesque. Quis ipsum suspendisse ultrices gravida dictum fusce. Urna id volutpat lacus laoreet non curabitur gravida.</p>
                 </div>
             </div>
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image2.jpg') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="d-flex info">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                            <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1>
-                        </div>
-                        <div class="ms-auto">
-                            <H1><i class="bi bi-heart " style="color:#D84545;"></i></H1>
-                            <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image7.jpg') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="d-flex info">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                            <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1>
-                        </div>
-                        <div class="ms-auto">
-                            <H1><i class="bi bi-heart " style="color:#D84545;"></i></H1>
-                            <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image4.png') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="d-flex info">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                            <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1>
-                        </div>
-                        <div class="ms-auto">
-                            <H1><i class="bi bi-heart " style="color:#D84545;"></i></H1>
-                            <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
     </div>
 
     @include('partials.footer')
