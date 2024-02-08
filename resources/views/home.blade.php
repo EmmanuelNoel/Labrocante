@@ -467,10 +467,17 @@
     <form action="{{ route('subscribers.store') }}" method="post">
         @csrf
         @if(session('success'))
-        <span class="alert alert-primary" id="primary">{{session('success')}}</span>
-        @elseif(session('existe'))
-        <span class="alert alert-danger" id="info">{{session('existe')}}</span>
-        @endif
+    <div class="alert alert-primary  animate__animated animate__bounceInRight alert-dismissible" role="alert" id="primary">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        {{ session('success') }}
+    </div>
+@elseif(session('existe'))
+    <div class="alert alert-danger  animate__animated animate__bounceInRight alert-dismissible" role="alert" id="info">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        {{ session('existe') }}
+    </div>
+@endif
+
         @if(!session('success') && !session('existe'))
     {{-- Ne rien afficher ici ou ajouter du contenu par défaut --}}
         @endif
