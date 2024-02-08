@@ -175,8 +175,9 @@
     .seemore .newsletters {
         margin: 0 auto;
     }
-    .seemore .newsletters span a {
+    .seemore .newsletters span input[type='submit'] {
         font-weight: 500;
+        background: transparent;
         font-size: 13px;
     }
     /* connexion */
