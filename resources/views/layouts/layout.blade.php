@@ -18,7 +18,7 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-light ">
                 <div class="container m-0">
-                <div class="d-flex">
+                <div class="d-flex valgueris">
                     <a class="navbar-brand" href="#">
                         <img src="{{ asset('assets/images/Logo 1.png') }}" alt="Brocante" width="150" height="50">
                     </a>
@@ -31,13 +31,13 @@
                     <input  type="search" placeholder="Faire une recherche..." aria-label="Search">
                     </div>
                 </div>
-                <ul class="navbar-nav navbarmenu d-flex ms-auto m-0">
-                    <li class="nav-item  me-lg-5 active">
+                <ul class="navbar-nav navbarmenu mx-lg-0 d-flex  m-0">
+                    <li class="nav-item mx-4  me-lg-5 active">
                         <a class="nav-link icons" href="#">
                           <span><i class="bi bi-bag"></i></span>
                         </a>
                     </li>
-                    <li class="nav-item  me-lg-5 active">
+                    <li class="nav-item mx-4 offset-md-8 me-lg-5 active">
                         <a class="nav-link icons" href="#">
                           <span><i class="bi bi-bell"></i></span>
                         </a>
@@ -54,9 +54,8 @@
                     </form></li>
                     @endauth
                     @guest
-                    <li class="nav-item">
-                        <a class="nav-link inscrire" href="{{ route('bienvenue') }}"><i class="bi bi-person-circle"></i>&nbsp;S'inscrire</a>
-                    </li>
+                    <!-- <li class="nav-item">
+                    </li> -->
                     @endguest
                     {{-- <li class="nav-item">
                     <li class="nav-item">

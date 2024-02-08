@@ -4,19 +4,21 @@
     <section class="col-md-1" id="menuslateral">
         <ul>
             <!-- Home -->
-            <li><a href="" oncclik="setpagesactive('Accueil')"><i class="fas fa-home" data-title="Accueil"></i></a></li> 
+            <li><a href="" onclick="setpagesactive('Accueil')"><i class="fas fa-home" data-title="Accueil"></i></a></li> 
             <!-- Produits / Services -->
-            <li><a href="" oncclik="setpagesactive('produit')"><i class="fa-solid fa-bag-shopping" data-title="Produit"></i></a></li>
+            <li><a href="" onclick="setpagesactive('produit')"><i class="fa-solid fa-bag-shopping" data-title="Produit"></i></a></li>
             <!-- Nouveautés  -->
-            <li><a href="" oncclik="setpagesactive('nouveaux')"><i class="fa-solid fa-newspaper" data-title="Nouveautés"></i></a></li>
+            <li><a href="" onclick="setpagesactive('nouveaux')"><i class="fa-solid fa-newspaper" data-title="Nouveautés"></i></a></li>
              <!-- Promotions / Offres spéciales  -->
-            <li><a href="" oncclik="setpagesactive('promotion')"><i class="fas fa-tags" data-title="Promotions"></i></a></li>
+            <li><a href="" onclick="setpagesactive('promotion')"><i class="fas fa-tags" data-title="Promotions"></i></a></li>
             <!-- Blog / Actualités -->
-            <li><a href="" oncclik="setpagesactive('actualite')"><i class="fas fa-feather-alt" data-title="Actualités"></i></a></li>
+            <li><a href="" onclick="setpagesactive('actualite')"><i class="fas fa-feather-alt" data-title="Actualités"></i></a></li>
             <!-- À Propos -->
-            <li><a href="" oncclik="setpagesactive('propos')"><i class="fas fa-book-open" data-title="À propos"></i></a></li>
+            <li><a href="" onclick="setpagesactive('propos')"><i class="fas fa-book-open" data-title="À propos"></i></a></li>
             <!-- Support -->
-            <li><a href="" oncclik="setpagesactive('support')"><i class="fas fa-question-circle" data-title="Support"></i></a></li>
+            <li><a href="" onclick="setpagesactive('support')"><i class="fas fa-question-circle" data-title="Support"></i></a></li>
+            <!-- Login -->
+            <li><a  href="{{ route('bienvenue') }}" onclick="setpagesactive('connexion')"><i class="fa-solid fa-user" data-title="S'inscrire"></i></a></li>        
         </ul>
     </section>
     <section id="bannierhome" class="col-md-11 p-0 d-flex align-items-center justify-content-center" style="background:url('{{ asset('assets/images/Union.png')}}') no-repeat; background-size:cover">
