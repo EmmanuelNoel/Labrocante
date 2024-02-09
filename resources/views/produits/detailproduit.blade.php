@@ -7,58 +7,6 @@
                     <div class="imgproduits ">
                         <img src="{{ asset('assets/images/image1.jpg') }}" alt="Stage 1">
                     </div>
-                    {{-- <div class="row mx-auto my-auto justify-content-center">
-                        <div id="recipeCarousel" class="mt-5 carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active">
-                                    <div class="col-lg-4">
-                                        <div class="card">
-                                            <div class="card-img">
-                                                <img src="{{ asset('assets/images/image1.jpg') }}"
-                                                alt="Image 3" class="img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class=" col-lg-4">
-                                        <div class="card">
-                                            <div class="card-img">
-                                                <img src="{{ asset('assets/images/image2.jpg') }}"
-                                                alt="Image 3" class="img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class=" col-lg-4">
-                                        <div class="card">
-                                            <div class="card-img">
-                                                <img src="{{ asset('assets/images/image5.png') }}"
-                                                alt="Image 3" class="img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class=" col-lg-4">
-                                        <div class="card">
-                                            <div class="card-img">
-                                                <img src="{{ asset('assets/images/image4.png') }}"
-                                                alt="Image 3" class="img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            </a>
-                            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            </a>
-                        </div>
-                    </div> --}}
                     <div class="text-center">
                         <div class=" mt-3 row">
                             <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -73,7 +21,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-item">
+                                    <div class="carousel-item ">
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
@@ -93,7 +41,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-item">
+                                    <div class="carousel-item ">
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
@@ -134,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <div class=" infodetail ms-auto">
+                <div class=" infodetail ms-auto me-5">
                     <h1>Nom du service</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet provident est, delectus rerum
                         repellat

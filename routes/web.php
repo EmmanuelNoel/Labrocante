@@ -28,7 +28,7 @@ Route::get('header', function () {
     return view('header2');
 })->name('header');
 Route::get('bienvenue', function () {
-    return view('bienvenue');
+    return view('auth.bienvenue');
 })->name('bienvenue');
 Route::get('detailproduit', function () {
     return view('produits.detailproduit');

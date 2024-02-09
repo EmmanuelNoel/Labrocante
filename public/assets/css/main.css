@@ -478,18 +478,8 @@ nav {
     background-size: cover;
 }
 
-
-/* #recipeCarousel .card-img{
-height: 150px;
-box-shadow: 10px 10px 20px #D9D9D9;
-}
-#recipeCarousel .card-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
 /* carrousel */
+
 @media (max-width: 767px) {
     .carousel-inner .carousel-item>div {
         display: none;
@@ -524,7 +514,10 @@ box-shadow: 10px 10px 20px #D9D9D9;
 .carousel-inner .carousel-item-start {
     transform: translateX(0);
 }
-
+.carousel-control-next, .carousel-control-prev {
+    color: black !important;
+    opacity: 10 !important;
+}
 
 .infodetail {
     width: 40%;
@@ -614,8 +607,8 @@ line-height: 57px;
 transform: rotate(0.08deg);
 }
 .apercu img{
-    width: 50%;
-    height: 500px;
+    width: 40%;
+    height: 400px;
     box-sizing: border-box;
     border: 0.5px solid #D9D9D9;
     border-radius: 5px;
@@ -754,39 +747,31 @@ footer .row a {
 
 /* bienvenue.blade.php */
 #connexionpage {
-    background: url("../images/Unionbackground.png") no-repeat;
+    /* background: url("../images/Unionbackground.png") no-repeat; */
     background-size: cover;
-    height: 90vh;
-    /* Utilisez la hauteur de la vue (viewport height) pour s'assurer qu'elle couvre toute la fenêtre visible */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .connexion,
 .usernameconfirm,
 .otpconfirm {
-    width: 25%;
-    padding: 20px;
+    width: max-content;
+    padding:50px 50px;
     margin: 0 auto;
     text-align: center;
     box-sizing: border-box;
     background: #ffffff;
     border: 1px solid #aaaaaa;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    border-radius: 10px;
+    margin-top: 5%;
 }
 
-.usernameconfirm,
-.otpconfirm {
-    width: 35%;
-}
 
 .otpconfirm .prompt p {
     font-family: "Inria Sans";
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .usernameconfirm input {
@@ -799,9 +784,9 @@ footer .row a {
     color: white;
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 30px;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 5px 10px;
 }
 
@@ -810,7 +795,7 @@ footer .row a {
     font-family: "Inria Sans";
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 48px;
     color: #22577a;
 }
@@ -820,7 +805,7 @@ footer .row a {
     width: auto;
     border: 1px solid #aaaaaa;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 20px;
+    border-radius: 18px;
     background-color: white;
     padding: 5px 0px;
     box-shadow: 0px 0px 4px #aaaaaa;
@@ -830,7 +815,7 @@ footer .row a {
     font-family: "Inria Sans";
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 29px;
     color: #22577a;
 }
