@@ -4,7 +4,7 @@
     <section class="col-md-1" id="menuslateral">
         <ul>
             <!-- Home -->
-            <li><a href=""><i class="fas fa-home" data-title="Accueil"></i></a></li> 
+            <li><a href=""><i class="fas fa-home" data-title="Accueil"></i></a></li>
             <!-- Produits / Services -->
             <li><a href="{{route('detailproduit')}}"><i class="fa-solid fa-bag-shopping" data-title="Produit"></i></a></li>
             <!-- Nouveautés  -->
@@ -18,7 +18,7 @@
             <!-- Support -->
             <li><a href=""><i class="fas fa-question-circle" data-title="Support"></i></a></li>
             <!-- Login -->
-            <li class="d-none d-lg-block "><a  href="{{ route('bienvenue') }}"><i class="fa-solid fa-user" data-title="S'inscrire"></i></a></li>        
+            <li class="d-none d-lg-block "><a  href="{{ route('bienvenue') }}"><i class="fa-solid fa-user" data-title="S'inscrire"></i></a></li>
         </ul>
     </section>
     <section id="bannierhome" class="col-md-11 p-0 d-flex align-items-center justify-content-center" style="background:url('{{ asset('assets/images/Union.png')}}') no-repeat; background-size:cover">
@@ -38,17 +38,19 @@
                 <div class="square">
                     <a href="{{ route('detailproduit') }}"><img src="{{ asset('assets/images/image5.png') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+               <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -58,17 +60,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image6.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+               <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,17 +82,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image7.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+               <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,17 +104,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image4.png') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,17 +132,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image10.png') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -144,17 +154,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image6.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -164,17 +176,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image7.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -184,17 +198,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image6.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -205,14 +221,13 @@
     <div class="line"></div>
     <br>
     <div class="row mb-5 mt-2">
-        <div class="col -xs -4 col -sm -3 col -md -2  suggestion">Hommes</div>
-        <div class="col -xs -4 col -sm -3 col -md -2  suggestion">Femmes</div>
-        <div class="col -xs -4 col -sm -3 col -md -2  suggestion">Enfants</div>
-        <div class="col -xs -4 col -sm -3 col -md -2  suggestion">Divertissements</div>
-        <div class="col -xs -4 col -sm -3 col -md -2  suggestion">Accessoires</div>
-        <div class="col -xs -4 col -sm -3 col -md -2  suggestion">Toutes les catégories</div>
+        <div class="col-xs-4 col-sm-3 col-md-2  suggestion">Hommes</div>
+        <div class="col-xs-4 col-sm-3 col-md-2  suggestion">Femmes</div>
+        <div class="col-xs-4 col-sm-3 col-md-2  suggestion">Enfants</div>
+        <div class="col-xs-4 col-sm-3 col-md-2  suggestion">Divertissements</div>
+        <div class="col-xs-4 col-sm-3 col-md-2  suggestion">Accessoires</div>
+        <div class="col-xs-4 col-sm-3 col-md-2  suggestion">Toutes les catégories</div>
     </div>
-
     <h2><b>Fil d'actualité</b></h2>
     <div class="line"></div>
     <br>
@@ -222,17 +237,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image10.png') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -242,17 +259,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image6.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -262,17 +281,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image7.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -282,17 +303,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image6.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -304,17 +327,19 @@
                 <div class="square">
                     <a href="{{ route('detailproduit') }}"><img src="{{ asset('assets/images/image5.png') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -324,17 +349,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image6.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -344,17 +371,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image7.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -364,17 +393,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image4.png') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -386,17 +417,19 @@
                 <div class="square">
                     <a href="{{ route('detailproduit') }}"><img src="{{ asset('assets/images/image1.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -406,17 +439,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image2.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -426,17 +461,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image7.jpg') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -446,17 +483,19 @@
                 <div class="square">
                     <a href=""><img src="{{ asset('assets/images/image4.png') }}" alt="reussite 1"></a>
                 </div>
-                <div class="d-flex info">
+                <div class="info d-flex">
                     <div>
                         <h1>Nom produit</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <h3>25000 FCFA</h3>
-                        {{-- <h1 class="mt-3"><img src="" alt="" class="circle" style="background-color:#AAAAAA"> Nom du
-                                vendeur</h1> --}}
                     </div>
-                    <div class="ms-auto">
-                        <H1><i class="bi bi-heart "></i></H1>
-                        <h3 class="paniertop"><i class="bi bi-cart-dash-fill"></i></h3>
+                    <div class="icons-container d-flex">
+                        <div>
+                            <H1><i class="bi bi-heart "></i></H1>
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                        </div>
                     </div>
                 </div>
             </div>

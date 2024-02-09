@@ -60,8 +60,9 @@
                     </form></li>
                     @endauth
                     @guest
-                    <!-- <li class="nav-item">
-                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link inscrire" href="{{ route('bienvenue') }}"><i class="bi bi-person-circle"></i>&nbsp;S'inscrire</a>
+                    </li>
                     @endguest
                     {{-- <li class="nav-item">
                     <li class="nav-item">
