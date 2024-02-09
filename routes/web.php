@@ -51,8 +51,8 @@ Route::get('home', function () {
 })->name('home');
 
 // Newsletters 
-Route::get('/', [SubscribersController::class, 'create'])->name('subscribers.store');
-Route::post('/', [SubscribersController::class, 'store'])->name('subscribers.create');
+Route::get('/', [SubscribersController::class, 'create'])->name('subscribers.create');
+Route::post('/', [SubscribersController::class, 'store'])->name('subscribers.store');
 
 
 
