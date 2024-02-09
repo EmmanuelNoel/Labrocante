@@ -1,8 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Auth\AuthController;
 use App\Http\Controllers\Admin\Auth\HomeController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\Categorie\CategorieController;
+use App\Http\Controllers\Admin\Products\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,15 +23,18 @@ Route::prefix('admin/')->group(function () {
         Route::post('login', [\App\Http\Controllers\Admin\Auth\AuthController::class, 'storeData'])->name('storeData');
         Route::get('forgotPassword', [\App\Http\Controllers\Admin\Auth\AuthController::class, 'showforgotPasswordForm'])->name('forgotPassword');
         Route::any('deconnexion', [AuthController::class, 'logout'])->name('logout');
-
     });
 });
 
 
 Route::middleware(['acessDashboard'])->group(function () {
-Route::prefix('admin/')->group(function () {
-    Route::name('admin.')->group(function () {
-        Route::get('dashboard', [\App\Http\Controllers\Admin\Auth\HomeController::class, 'dashboard'])->name('dashboard');
+    Route::prefix('admin/')->group(function () {
+        Route::name('admin.')->group(function () {
+            Route::get('dashboard', [\App\Http\Controllers\Admin\Auth\HomeController::class, 'dashboard'])->name('dashboard');
+        });
+
+        Route::resource('categories', CategorieController::class);
+
+        Route::resource('produits', ProductController::class);
     });
-});
 });

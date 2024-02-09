@@ -4,19 +4,21 @@
     <section class="col-md-1" id="menuslateral">
         <ul>
             <!-- Home -->
-            <li><a href="" oncclik="setpagesactive('Accueil')"><i class="fas fa-home" data-title="Accueil"></i></a></li>
+            <li><a href=""><i class="fas fa-home" data-title="Accueil"></i></a></li>
             <!-- Produits / Services -->
-            <li><a href="" oncclik="setpagesactive('produit')"><i class="fa-solid fa-bag-shopping" data-title="Produit"></i></a></li>
+            <li><a href="{{route('detailproduit')}}"><i class="fa-solid fa-bag-shopping" data-title="Produit"></i></a></li>
             <!-- Nouveautés  -->
-            <li><a href="" oncclik="setpagesactive('nouveaux')"><i class="fa-solid fa-newspaper" data-title="Nouveautés"></i></a></li>
+            <li><a href=""><i class="fa-solid fa-newspaper" data-title="Nouveautés"></i></a></li>
              <!-- Promotions / Offres spéciales  -->
-            <li><a href="" oncclik="setpagesactive('promotion')"><i class="fas fa-tags" data-title="Promotions"></i></a></li>
+            <li><a href=""><i class="fas fa-tags" data-title="Promotions"></i></a></li>
             <!-- Blog / Actualités -->
-            <li><a href="" oncclik="setpagesactive('actualite')"><i class="fas fa-feather-alt" data-title="Actualités"></i></a></li>
+            <li><a href=""><i class="fas fa-feather-alt" data-title="Actualités"></i></a></li>
             <!-- À Propos -->
-            <li><a href="" oncclik="setpagesactive('propos')"><i class="fas fa-book-open" data-title="À propos"></i></a></li>
+            <li><a href=""><i class="fas fa-book-open" data-title="À propos"></i></a></li>
             <!-- Support -->
-            <li><a href="" oncclik="setpagesactive('support')"><i class="fas fa-question-circle" data-title="Support"></i></a></li>
+            <li><a href=""><i class="fas fa-question-circle" data-title="Support"></i></a></li>
+            <!-- Login -->
+            <li class="d-none d-lg-block "><a  href="{{ route('bienvenue') }}"><i class="fa-solid fa-user" data-title="S'inscrire"></i></a></li>
         </ul>
     </section>
     <section id="bannierhome" class="col-md-11 p-0 d-flex align-items-center justify-content-center" style="background:url('{{ asset('assets/images/Union.png')}}') no-repeat; background-size:cover">
@@ -501,14 +503,31 @@
     </div>
 </div>
 <div class="seemore container mb-5 text-center  d-block align-items-center justify-content-center ">
+    <form action="{{ route('subscribers.store') }}" method="post">
+        @csrf
+        @if(session('success'))
+    <div class="alert alert-primary  animate__animated animate__bounceInRight alert-dismissible" role="alert" id="primary">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        {{ session('success') }}
+    </div>
+@elseif(session('existe'))
+    <div class="alert alert-danger  animate__animated animate__bounceInRight alert-dismissible" role="alert" id="info">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        {{ session('existe') }}
+    </div>
+@endif
+
+        @if(!session('success') && !session('existe'))
+    {{-- Ne rien afficher ici ou ajouter du contenu par défaut --}}
+        @endif
     <H2>Abonnez vous à notre newsletter</H2>
     <p>Ne manquez pas nos meilleures offres ! Ne vous inquiétez pas, nous ne vous spammerons pas.</p>
     <div class="newsletters ">
-        <input type="text" placeholder="Entrez votre email ici">
-        <span class="ms-auto  "><a href="">S'abonner</a></span>
+        <input type="email" name="subscribersmail" required placeholder="Entrez votre email ici">
+        <span class="ms-auto  "><input type="submit" value="S'abonner"></span>
     </div>
+    </form>
 </div>
-<script src="home.js"></script>
 <script src="https://kit.fontawesome.com/3a537738e0.js" crossorigin="anonymous"></script>
 @include('partials.footer')
 @endsection

@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('subscribers', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->text('email');
-            $table->text('token');
-            $table->text('status');
+            $table->text('token')->nullable();
+            $table->string('status')->default('active');
             $table->timestamps();
         });
     }

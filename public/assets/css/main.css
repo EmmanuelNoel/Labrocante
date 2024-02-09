@@ -4,7 +4,6 @@ body {
     font-family: Inria Sans;
     width: 100%;
 }
-
 /* menuslateral */
 #conteneur {
     overflow: hidden;
@@ -23,8 +22,7 @@ body {
 #menuslateral ul li a i {
     font-size: 23px;
 }
-
-.active-page {
+.active-page{
     background-color: #2f45c6;
     color: #1b2845;
 }
@@ -58,8 +56,9 @@ body {
 #menuslateral li:nth-child(4),
 #menuslateral li:nth-child(5),
 #menuslateral li:nth-child(6),
-#menuslateral li:nth-child(7) {
-    margin-top: 15px;
+#menuslateral li:nth-child(7),
+#menuslateral li:nth-child(8) {
+    margin-top: 10px;
 }
 
 #menuslateral li:hover {
@@ -127,6 +126,7 @@ nav {
     border-radius: 20px;
     width: 500px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .dropdown-icon,
@@ -152,14 +152,13 @@ nav {
 .navbarmenu {
     flex-direction: row;
 }
-
-.navbar>.container,
-.navbar>.container-fluid,
-.navbar>.container-lg,
-.navbar>.container-md,
-.navbar>.container-sm,
-.navbar>.container-xl,
-.navbar>.container-xxl {
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -440,7 +439,7 @@ nav {
     border-radius: 100px;
 }
 
-.seemore .newsletters span a {
+.seemore .newsletters span input[type='submit']{
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 700;
@@ -448,6 +447,8 @@ nav {
     line-height: 32px;
     text-align: center;
     color: #ffffff;
+    background: transparent;
+
 }
 
 .seemore .newsletters input {

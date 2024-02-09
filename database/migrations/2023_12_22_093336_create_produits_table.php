@@ -17,10 +17,11 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('nom');
             $table->string('slug');
-            $table->string('description');
-            $table->string('details');
+            $table->string('description')->nullable();
+            $table->string('details')->nullable();
             $table->string('prix');
             $table->string('quantity');
+            $table->boolean('status')->default(1);
             $table->foreignUuid('category_product_id')->constained('category_products');
             $table->timestamps();
         });

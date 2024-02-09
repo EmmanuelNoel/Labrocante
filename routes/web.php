@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VerificationController;
-
+use App\Http\Controllers\SubscribersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,7 @@ use App\Http\Controllers\VerificationController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('accueil');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -49,6 +49,12 @@ Route::get('panier', function () {
 Route::get('home', function () {
     return view('home');
 })->name('home');
+
+// Newsletters 
+Route::get('/', [SubscribersController::class, 'create'])->name('subscribers.store');
+Route::post('/', [SubscribersController::class, 'store'])->name('subscribers.create');
+
+
 
 // Otp routes
 Route::get('/verify-otp/{id}', [VerificationController::class, 'showVerificationForm'])->name('verify-otp');
