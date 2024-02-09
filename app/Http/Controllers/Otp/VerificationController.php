@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Otp;
 
 use Exception;
 use App\Models\User;
@@ -8,6 +8,7 @@ use App\Mail\SendOtp;
 use Ichtrojan\Otp\Otp;
 use App\Models\OtpCode;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Providers\RouteServiceProvider;

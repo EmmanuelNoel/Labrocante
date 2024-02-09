@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\VerificationController;
+use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\SubscribersController;
+use App\Http\Controllers\Users\ProfileController;
+use App\Http\Controllers\Otp\VerificationController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,9 +17,7 @@ use App\Http\Controllers\SubscribersController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('accueil');
+Route::get('/', [WelcomeController::class, 'index'])->name('accueil');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -50,9 +50,9 @@ Route::get('home', function () {
     return view('home');
 })->name('home');
 
-// Newsletters 
-Route::get('/', [SubscribersController::class, 'create'])->name('subscribers.create');
-Route::post('/', [SubscribersController::class, 'store'])->name('subscribers.store');
+// Newsletters
+Route::get('/subscribers', [SubscribersController::class, 'create'])->name('subscribers.store');
+Route::post('/subscribers', [SubscribersController::class, 'store'])->name('subscribers.create');
 
 
 

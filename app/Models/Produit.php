@@ -27,7 +27,7 @@ class Produit extends Model
 
     public function category()
     {
-        return $this->hasOne(CategoryProduct::class, 'category_product_id');
+        return $this->hasOne(CategoryProduct::class, 'id', 'category_product_id');
     }
 
     public function medias()
