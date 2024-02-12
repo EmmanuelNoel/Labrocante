@@ -4,7 +4,7 @@
     <section class="col-md-1" id="menuslateral">
         <ul>
             <!-- Home -->
-            <li><a href=""><i class="fas fa-home" data-title="Accueil"></i></a></li>
+            <li><a href="{{ route('home') }}"><i class="fas fa-home" data-title="Accueil"></i></a></li>
             <!-- Produits / Services -->
             <li><a href="{{route('detailproduit')}}"><i class="fa-solid fa-bag-shopping" data-title="Produit"></i></a></li>
             <!-- Nouveautés  -->

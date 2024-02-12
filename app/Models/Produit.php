@@ -5,6 +5,8 @@ namespace App\Models;
 use App\Traits\UUID;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Produit extends Model
 {
@@ -18,21 +20,27 @@ class Produit extends Model
         'details',
         'prix',
         'quantity',
-        'status',
+        'author_id',
         'category_product_id',
+        'produit_status_id',
         'created_at',
         'updated_at'
 
     ];
 
-    public function category()
+    public function category() : HasOne
     {
         return $this->hasOne(CategoryProduct::class, 'id', 'category_product_id');
     }
 
-    public function medias()
+    public function medias() : HasMany
     {
         return $this->hasMany(ProduitMedia::class);
+    }
+
+    public function status() : HasOne
+    {
+        return $this->hasOne(ProduitStatus::class, 'id', 'produit_status_id');
     }
 
 

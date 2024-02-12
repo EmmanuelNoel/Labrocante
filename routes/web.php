@@ -17,7 +17,7 @@ use App\Http\Controllers\Otp\VerificationController;
 |
 */
 
-Route::get('/', [WelcomeController::class, 'index'])->name('accueil');
+Route::get('/', [WelcomeController::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -46,9 +46,9 @@ Route::get('panier', function () {
     return view('panier');
 })->name('panier');
 
-Route::get('home', function () {
-    return view('home');
-})->name('home');
+// Route::get('home', function () {
+//     return view('home');
+// })->name('home');
 
 // Newsletters
 Route::get('/subscribers', [SubscribersController::class, 'create'])->name('subscribers.store');

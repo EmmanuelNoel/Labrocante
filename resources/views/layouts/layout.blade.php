@@ -33,12 +33,12 @@
                     </div>
                 </div>
                 <ul class="navbar-nav navbarmenu mx-lg-0 d-flex  m-0">
-                    <li class="nav-item mx-4  me-lg-5 active" id="onalechoix">
+                    <li class="nav-item mx-4  me-lg-1 active" id="onalechoix">
                         <a class="nav-link icons" href="#">
                           <span><i class="bi bi-bag"></i></span>
                         </a>
                     </li>
-                    <li class="nav-item mx-4 offset-md-8 me-lg-5 active"id="daccord" >
+                    <li class="nav-item mx-4 offset-md-8 me-lg-4 active"id="daccord" >
                         <a class="nav-link icons" href="#">
                           <span><i class="bi bi-bell"></i></span>
                         </a>
