@@ -334,7 +334,7 @@
                         </div>
                         <div class="icons-container d-flex">
 
-                            Abdoul BACHABI, [12/02/2024 12:23]
+                            
                             <div>
                                 <H1><i class="bi bi-heart "></i></H1>
                             </div>
