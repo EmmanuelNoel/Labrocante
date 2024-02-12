@@ -1,19 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Products;
+namespace App\Http\Controllers\Admin\Users;
 
-use Illuminate\Http\Request;
-use App\Models\CategoryProduct;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\ProductRequest;
-use App\Models\Produit;
-use App\Models\ProduitMedia;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Redirect;
-use App\Services\ImageService;
-use App\Traits\ImageUploadTrait;
+use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ManagerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,9 +15,6 @@ class ProductController extends Controller
     public function index()
     {
         //
-        $products = Produit::with('category', 'medias')->paginate(10);
-      
-        return view('admin.products.index', compact('products'));
     }
 
     /**
@@ -36,8 +25,6 @@ class ProductController extends Controller
     public function create()
     {
         //
-        $categories = CategoryProduct::all();
-        return view('admin.products.create', compact('categories'));
     }
 
     /**
@@ -46,27 +33,9 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductRequest $request): RedirectResponse
+    public function store(Request $request)
     {
-        // dd($request->all());
-
-        if ($request->validated()) {
-            $product = Produit::create($request->except('images', '_token'));
-
-            if ($request->images && count($request->images) > 0) {
-                (new ImageService())->storeProductImages($request->images, $product);
-            }
-
-            return redirect()->route('produits.index')->with([
-                'message' => 'Create product successfully',
-                'alert-type' => 'success'
-            ]);
-        }
-
-        return back()->with([
-            'message' => 'Something was wrong, please try again late',
-            'alert-type' => 'error'
-        ]);
+        //
     }
 
     /**

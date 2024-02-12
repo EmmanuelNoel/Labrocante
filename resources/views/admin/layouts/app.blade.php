@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="{{ asset('admin_assets/vendor/bootstrap-fileinput/css/fileinput.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin_assets/vendor/summernote/summernote-bs4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin_assets/css/custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin_assets/vendor/fontawesome-free/css/all.min.css') }}">
 
     <style>
         a:hover {
@@ -125,9 +126,6 @@
     <script src="js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('admin_assets/js/demo/chart-pie-demo.js') }}"></script>
 
-
-    <script src="{{ asset('admin_assets/js/app.js') }}"></script>
-    <script src="{{ asset('backend/js/sb-admin-2.min.js') }}"></script>
     <script src="{{ asset('admin_assets/js/custom.js') }}"></script>
     <!-- file input -->
     <script src="{{ asset('admin_assets/vendor/bootstrap-fileinput/js/plugins/piexif.min.js') }}"></script>

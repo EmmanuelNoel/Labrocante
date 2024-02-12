@@ -6,6 +6,7 @@ use App\Traits\UUID;
 use App\Models\Produit;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ProduitMedia extends Model
 {
@@ -21,7 +22,7 @@ class ProduitMedia extends Model
 
     ];
 
-    public function produit()
+    public function produit() : BelongsTo
     {
         return $this->belongsTo(Produit::class);
     }

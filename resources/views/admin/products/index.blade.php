@@ -40,28 +40,27 @@
                 </tr>
                 </thead>
                 <tbody>
-                {{-- @forelse($products as $product)
+                @forelse($products as $product)
                     <tr>
                         <td>{{ $product->id }}</td>
                         <td>
-                            @if($product->firstMedia)
-                            <img src="{{ asset('storage/images/products/' . $product->firstMedia->file_name) }}"
-                                 width="60" height="60" alt="{{ $product->name }}">
+                            @if($product->medias->count() > 0)
+                            <img src="{{ asset('storage/' . $product->medias[0]->path) }}"
+                                 width="60" height="60" alt="{{ $product->medias[0]->nom }}">
                             @else
-                                <img src="{{ asset('img/no-img.png') }}" width="60" height="60" alt="{{ $product->name }}">
+                                <img src="{{ asset('admin_assets/img/no-img.png') }}" width="60" height="60" alt="{{ $product->name }}">
                             @endif
                         </td>
-                        <td><a href="{{ route('admin.products.show', $product->id) }}">{{ $product->name }}</a></td>
-                        <td>{{ $product->featured }}</td>
+                        <td><a href="{{ route('produits.show', $product->id) }}">{{ $product->nom }}</a></td>
+                        <td>{{ $product->slug }}</td>
                         <td>{{ $product->quantity }}</td>
-                        <td>SR {{ $product->price }}</td>
-                        <td class="text-danger">{{ $product->tags->pluck('name')->join(', ') }}</td>
-                        <td>{{ $product->category ? $product->category->name : NULL }}</td>
-                        <td>{{ $product->status }}</td>
+                        <td>SR {{ $product->prix }}</td>
+                        <td>{{ $product->category ? $product->category->nom : NULL }}</td>
+                        <td>{{ $product->status ? 'Active' : 'Inactive' }}</td>
                         <td>{{ $product->created_at }}</td>
                         <td>
                             <div class="btn-group btn-group-sm">
-                                <a href="{{ route('admin.products.edit', $product) }}" class="btn btn-sm btn-primary">
+                                <a href="{{ route('produits.edit', $product) }}" class="btn btn-sm btn-primary">
                                     <i class="fa fa-edit"></i>
                                 </a>
                                 <a href="javascript:void(0);"
@@ -71,7 +70,7 @@
                                     <i class="fa fa-trash"></i>
                                 </a>
                             </div>
-                            <form action="{{ route('admin.products.destroy', $product) }}"
+                            <form action="{{ route('produits.destroy', $product) }}"
                                   method="POST"
                                   id="delete-product-{{ $product->id }}" class="d-none">
                                 @csrf
@@ -83,16 +82,16 @@
                     <tr>
                         <td class="text-center" colspan="10">No products found.</td>
                     </tr>
-                @endforelse --}}
+                @endforelse
                 </tbody>
                 <tfoot>
-                {{-- <tr>
+              <tr>
                     <td colspan="10">
                         <div class="float-right">
                             {!! $products->appends(request()->all())->links() !!}
                         </div>
                     </td>
-                </tr> --}}
+                </tr>
                 </tfoot>
             </table>
         </div>

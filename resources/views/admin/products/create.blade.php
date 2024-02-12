@@ -36,7 +36,7 @@
                     <div class="col-6">
                         <div class="form-group">
                             <label for="slug" class="text-small text-uppercase">{{ __('Slug') }}</label>
-                            <input id="slug" type="number" class="form-control form-control-lg" name="slug"
+                            <input id="slug" type="text" class="form-control form-control-lg" name="slug"
                                 value="{{ old('slug') }}">
                             @error('slug')
                                 <span class="text-danger">{{ $message }}</span>

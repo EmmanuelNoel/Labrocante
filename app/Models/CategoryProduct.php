@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Traits\UUID;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class CategoryProduct extends Model
 {
@@ -21,9 +22,9 @@ class CategoryProduct extends Model
 
     ];
 
-    public function produits()
+    public function produits() : BelongsTo
     {
-        return $this->belongsTo(Produit::class);
+        return $this->belongsTo(Produit::class, 'category_product_id', 'id');
     }
 
 }
