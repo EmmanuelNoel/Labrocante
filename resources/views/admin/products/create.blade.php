@@ -79,7 +79,7 @@
                                 @empty
                                 @endforelse
                             </select>
-                            @error('category_id')
+                            @error('category_product_id')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
@@ -88,12 +88,17 @@
                     <div class="col-6">
                         <div class="form-group">
                             <label for="status">Status</label>
-                            <select name="status" id="status" class="form-control">
+                            <select name="produit_status_id" id="status" class="form-control">
                                 <option value="">---</option>
-                                <option value="1" {{ old('status') == '1' ? 'selected' : null }}>Active</option>
-                                <option value="0" {{ old('status') == '0' ? 'selected' : null }}>Inactive</option>
+                                @forelse($statuses as $status )
+                                <option value="{{ $status->id }}" {{ old('status') == $status->id ? 'selected' : null }}> {{ $status->nom }} </option>
+                                @empty
+                                <option >
+                                          Aucun status
+                                </option>
+                                @endforelse
                             </select>
-                            @error('status')
+                            @error('produit_status_id')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>

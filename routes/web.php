@@ -19,11 +19,6 @@ use App\Http\Controllers\Otp\VerificationController;
 
 Route::get('/', [WelcomeController::class, 'index'])->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-
 Route::get('header', function () {
     return view('header2');
 })->name('header');
@@ -37,24 +32,19 @@ Route::get('suggestion', function () {
     return view('suggestion');
 })->name('suggestion');
 Route::get('acheter', function () {
-    return view('categories');
+    return view('categories.categories');
 })->name('categories');
 Route::get('articlefavoris', function () {
-    return view('articlefavoris');
+    return view('articles.articlefavoris');
 })->name('articlefavoris');
 Route::get('panier', function () {
     return view('panier');
 })->name('panier');
 
-// Route::get('home', function () {
-//     return view('home');
-// })->name('home');
 
 // Newsletters
 Route::get('/subscribers', [SubscribersController::class, 'create'])->name('subscribers.store');
 Route::post('/subscribers', [SubscribersController::class, 'store'])->name('subscribers.create');
-
-
 
 // Otp routes
 Route::get('/verify-otp/{id}', [VerificationController::class, 'showVerificationForm'])->name('verify-otp');
@@ -62,13 +52,19 @@ Route::post('/validate-otp', [VerificationController::class, 'valideOtpCode'])->
 Route::get('/sendOtpCode/{id}', [VerificationController::class, 'sendOtpCode'])->name('sendOtpCode');
 Route::get('/verificationSuccessfully', [VerificationController::class, 'verificationSuccessfully'])->name('verificationSuccessfully');
 
-
-
+//Profile
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+//User dashboard
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [ProfileController::class, 'edit'])->name('dashboard');
+
+});
+
 
 require __DIR__.'/auth.php';
 include 'admin.php';

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('details')->nullable();
             $table->string('prix');
             $table->string('quantity');
-            $table->string('author_id');
+            $table->foreignUuid('user_id')->constained('users');
             $table->foreignUuid('category_product_id')->constained('category_products');
             $table->foreignUuid('produit_status_id')->constained('produit_statuses');
             $table->timestamps();
