@@ -445,13 +445,13 @@
         <form action="{{ route('subscribers.store') }}" method="post">
             @csrf
             @if (session('success'))
-                <div class="alert alert-primary  animate__animated animate__bounceInRight alert-dismissible"
+                <div class="alert alert-primary col-md-4 animate__animated animate__bounceInRight alert-dismissible"
                     role="alert" id="primary">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     {{ session('success') }}
                 </div>
             @elseif(session('existe'))
-                <div class="alert alert-danger  animate__animated animate__bounceInRight alert-dismissible" role="alert"
+                <div class="alert alert-danger col-md-4 animate__animated animate__bounceInRight alert-dismissible" role="alert"
                     id="info">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     {{ session('existe') }}

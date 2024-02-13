@@ -1,22 +1,22 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WelcomeController;
-use App\Http\Controllers\SubscribersController;
-use App\Http\Controllers\Users\ProfileController;
 use App\Http\Controllers\Otp\VerificationController;
 use App\Http\Controllers\Users\DashboardController;
+use App\Http\Controllers\Users\ProfileController;
+use App\Http\Controllers\NewSubscriberController;
+use App\Http\Controllers\WelcomeController;
+use Illuminate\Support\Facades\Route;
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+ * |--------------------------------------------------------------------------
+ * | Web Routes
+ * |--------------------------------------------------------------------------
+ * |
+ * | Here is where you can register web routes for your application. These
+ * | routes are loaded by the RouteServiceProvider and all of them will
+ * | be assigned to the "web" middleware group. Make something great!
+ * |
+ */
 
 Route::get('/', [WelcomeController::class, 'index'])->name('home');
 
@@ -42,10 +42,9 @@ Route::get('panier', function () {
     return view('panier');
 })->name('panier');
 
-
 // Newsletters
-Route::get('/subscribers', [SubscribersController::class, 'create'])->name('subscribers.store');
-Route::post('/subscribers', [SubscribersController::class, 'store'])->name('subscribers.create');
+Route::get('/subscribers', [NewSubscriberController::class, 'create'])->name('subscribers.store');
+Route::post('/subscribers', [NewSubscriberController::class, 'store'])->name('subscribers.create');
 
 // Otp routes
 Route::get('/verify-otp/{id}', [VerificationController::class, 'showVerificationForm'])->name('verify-otp');
@@ -53,19 +52,17 @@ Route::post('/validate-otp', [VerificationController::class, 'valideOtpCode'])->
 Route::get('/sendOtpCode/{id}', [VerificationController::class, 'sendOtpCode'])->name('sendOtpCode');
 Route::get('/verificationSuccessfully', [VerificationController::class, 'verificationSuccessfully'])->name('verificationSuccessfully');
 
-//Profile
+// Profile
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//User dashboard
+// User dashboard
 Route::middleware('auth')->group(function () {
-  Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 });
 
-
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 include 'admin.php';

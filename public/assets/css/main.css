@@ -10,7 +10,12 @@ body {
     height: 670px;
     display: flex;
 }
-
+/* Pop up */
+#info,#primary{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
 #menuslateral {
     height: 656px;
     width: 70px;
