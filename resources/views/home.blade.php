@@ -445,14 +445,14 @@
         <form action="{{ route('subscribers.store') }}" method="post">
             @csrf
             @if (session('success'))
-                <div class="alert alert-primary col-md-4 animate__animated animate__bounceInRight alert-dismissible"
-                    role="alert" id="primary">
+                <div class="alert alert-primary show-popup col-md-4 animate__animated animate__bounceInRight alert-dismissible"
+                    role="alert" id="primary" data-show-popup="true">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     {{ session('success') }}
                 </div>
             @elseif(session('existe'))
-                <div class="alert alert-danger col-md-4 animate__animated animate__bounceInRight alert-dismissible" role="alert"
-                    id="info">
+                <div class="alert alert-danger show-popup col-md-4 animate__animated animate__bounceInRight alert-dismissible" role="alert"
+                    id="info" data-show-popup="true">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     {{ session('existe') }}
                 </div>
@@ -470,5 +470,6 @@
         </form>
     </div>
     <script src="https://kit.fontawesome.com/3a537738e0.js" crossorigin="anonymous"></script>
+    <script src="{{asset('home.js')}}"></script>
     @include('partials.footer')
 @endsection
