@@ -11,7 +11,8 @@ body {
     display: flex;
 }
 /* Pop up */
-#info,#primary{
+#info,
+#primary {
     position: fixed;
     top: 10px;
     right: 10px;
@@ -27,7 +28,7 @@ body {
 #menuslateral ul li a i {
     font-size: 23px;
 }
-.active-page{
+.active-page {
     background-color: #2f45c6;
     color: #1b2845;
 }
@@ -170,113 +171,127 @@ nav {
         margin-left: -150px;
     }
 }
-@media screen and (max-width:904px) {
+@media screen and (max-width: 904px) {
     .valgueris {
         margin-left: -110px;
     }
 }
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     .valgueris {
         margin-left: -10px;
     }
     #menuslateral ul li a i {
         font-size: 19px;
     }
-    #menuslateral{
+    #menuslateral {
         width: 60px;
     }
 }
-@media screen and (width:991px) {
+@media screen and (width: 991px) {
     .valgueris {
         margin-left: -200px;
     }
     #menuslateral ul li a i {
         font-size: 19px;
     }
-    #menuslateral{
+    #menuslateral {
         width: 60px;
     }
 }
-@media screen and (width:509px) {
+@media screen and (width: 509px) {
     .valgueris {
         margin-left: 33px;
     }
     #menuslateral ul li a i {
         font-size: 19px;
     }
-    #menuslateral{
+    #menuslateral {
         width: 60px;
     }
 }
-@media screen and (width:991px) {
+@media screen and (width: 991px) {
     .valgueris {
         margin-left: -200px;
     }
     #menuslateral ul li a i {
         font-size: 19px;
     }
-    #menuslateral{
+    #menuslateral {
         width: 60px;
     }
 }
-@media screen and (width:375px) {
+@media screen and (width: 375px) {
     .valgueris {
-        margin-left: 30px;
+        margin-left: 15px;
+    }
+    #bannierhome{
+        width: 100% !important;
+    }
+    #menuslateral{
+        width: 70px!important;
     }
 }
-@media screen and (width:425px) {
+@media screen and (width: 425px) {
     .valgueris {
         margin-left: 40px;
     }
 }
-@media screen and (width:320px) {
-    #dansuntemps{
-        margin: 0!important;
+@media screen and (width: 320px) {
+    #dansuntemps {
+        margin: 0 !important;
     }
-    #daccord{
-        margin-right: 14px!important;
-        margin-left: 5px!important;
+    #daccord {
+        margin-right: 14px !important;
+        margin-left: 5px !important;
     }
-    #onalechoix{
-        margin-right: 14px!important;
-        margin-left: 5px!important;
+    #onalechoix {
+        margin-right: 14px !important;
+        margin-left: 5px !important;
     }
-    .valgueris{
-        margin-left: 25px!important;
+    .valgueris {
+        margin-left: 25px !important;
     }
-
 }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {  }
+@media (min-width: 576px) {
+}
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {  }
+@media (min-width: 768px) {
+}
 
 /* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {  }
+@media (min-width: 992px) {
+}
 
 /* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  }
+@media (min-width: 1200px) {
+}
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {  }
-
+@media (min-width: 1400px) {
+}
 
 /* // `sm` applies to x-small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {  }
+@media (max-width: 575.98px) {
+}
 
 /* // `md` applies to small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {  }
+@media (max-width: 767.98px) {
+}
 
 /* // `lg` applies to medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {  }
+@media (max-width: 991.98px) {
+}
 
 /* // `xl` applies to large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {  }
+@media (max-width: 1199.98px) {
+}
 
 /* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) {  }
+@media (max-width: 1399.98px) {
+}
 
 .navbar > .container,
 .navbar > .container-fluid,
@@ -565,7 +580,7 @@ nav {
     border-radius: 100px;
 }
 
-.seemore .newsletters span input[type='submit']{
+.seemore .newsletters span input[type="submit"] {
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 700;
@@ -574,7 +589,6 @@ nav {
     text-align: center;
     color: #ffffff;
     background: transparent;
-
 }
 
 .seemore .newsletters input {
@@ -608,11 +622,11 @@ nav {
 /* carrousel */
 
 @media (max-width: 767px) {
-    .carousel-inner .carousel-item>div {
+    .carousel-inner .carousel-item > div {
         display: none;
     }
 
-    .carousel-inner .carousel-item>div:first-child {
+    .carousel-inner .carousel-item > div:first-child {
         display: block;
     }
 }
@@ -625,7 +639,6 @@ nav {
 
 /* medium and up screens */
 @media (min-width: 768px) {
-
     .carousel-inner .carousel-item-end.active,
     .carousel-inner .carousel-item-next {
         transform: translateX(25%);
@@ -641,7 +654,8 @@ nav {
 .carousel-inner .carousel-item-start {
     transform: translateX(0);
 }
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-next,
+.carousel-control-prev {
     color: black !important;
     opacity: 10 !important;
 }
@@ -650,7 +664,7 @@ nav {
     width: 40%;
     padding: 20px 50px;
     height: max-content;
-    background: #F1F1F1;
+    background: #f1f1f1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     text-align: center;
@@ -674,27 +688,27 @@ nav {
 }
 
 .infodetail .tarifunique {
-font-family: 'Inria Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 17px;
-line-height: 0px;
-margin-top: 40px;
-color: #1F263E;
+    font-family: "Inria Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 0px;
+    margin-top: 40px;
+    color: #1f263e;
 }
-.infodetail .line{
-    margin:30px 0px;
+.infodetail .line {
+    margin: 30px 0px;
 }
-.infodetail .prix h3{
-font-family: 'Inria Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 22px;
-font-feature-settings: 'liga' off, 'kern' off;
+.infodetail .prix h3 {
+    font-family: "Inria Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    font-feature-settings: "liga" off, "kern" off;
 }
-.infodetail .icone h3{
-font-size: 22px;
-font-weight: 700;
+.infodetail .icone h3 {
+    font-size: 22px;
+    font-weight: 700;
 }
 
 .infodetail .liens {
@@ -704,84 +718,85 @@ font-weight: 700;
     padding: 0px 20px;
     display: inline-block;
 }
-.infodetail .liens a{
-    font-family: 'Inria Sans';
+.infodetail .liens a {
+    font-family: "Inria Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 17px;
     line-height: 38px;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.description_service p{
-font-family: 'Inria Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-margin-top: 40px;
-text-align: justify;
+.description_service p {
+    font-family: "Inria Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 40px;
+    text-align: justify;
 }
-.apercu{
+.apercu {
     margin: 3% 0%;
 }
 
-.apercu h2,.aproposvendeur H2{
-font-family: 'Agency FB';
-font-style: normal;
-font-weight: 700;
-font-size: 28px;
-line-height: 57px;
-transform: rotate(0.08deg);
+.apercu h2,
+.aproposvendeur H2 {
+    font-family: "Agency FB";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 57px;
+    transform: rotate(0.08deg);
 }
-.apercu img{
+.apercu img {
     width: 40%;
     height: 400px;
     box-sizing: border-box;
-    border: 0.5px solid #D9D9D9;
+    border: 0.5px solid #d9d9d9;
     border-radius: 5px;
-
 }
-.apercu p,.aproposvendeur .textevendeur p{
-margin: 20px 0px;
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-text-align: justify;
+.apercu p,
+.aproposvendeur .textevendeur p {
+    margin: 20px 0px;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
 }
-.aproposvendeur{
+.aproposvendeur {
     margin-bottom: 5%;
 }
-.aproposvendeur .row img{
+.aproposvendeur .row img {
     border-radius: 50%;
     width: 100px;
     height: 100px;
 }
-.aproposvendeur .infovendeur{
+.aproposvendeur .infovendeur {
     margin-left: 5%;
     text-align: center;
 }
 .infovendeur.d-block > * {
     margin: auto;
 }
-.aproposvendeur .infovendeur h3{
-font-family: 'Agency FB';
-font-style: normal;
-font-weight: 700;
-font-size: 22px;
+.aproposvendeur .infovendeur h3 {
+    font-family: "Agency FB";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
 }
-.aproposvendeur .infovendeur p{
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-text-align: left;
+.aproposvendeur .infovendeur p {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: left;
 }
 
-.aproposvendeur .row .verticalline{
-border: 3px solid #274060;
-height:100%;
-border-radius: 10px;
+.aproposvendeur .row .verticalline {
+    border: 3px solid #274060;
+    height: 100%;
+    border-radius: 10px;
 }
 
 /* panier */
@@ -882,7 +897,7 @@ footer .row a {
 .usernameconfirm,
 .otpconfirm {
     width: max-content;
-    padding:50px 50px;
+    padding: 50px 50px;
     margin: 0 auto;
     text-align: center;
     box-sizing: border-box;
@@ -892,7 +907,6 @@ footer .row a {
     border-radius: 10px;
     margin-top: 5%;
 }
-
 
 .otpconfirm .prompt p {
     font-family: "Inria Sans";
