@@ -34,7 +34,7 @@ class ProductRequest extends FormRequest
                     'prix' => ['required', 'numeric'],
                     'quantity' => ['required', 'numeric'],
                     'category_product_id' => ['required'],
-                    'status' => ['required'],
+                    'produit_status_id' => ['required'],
                     'description' => ['required', 'max:1000'],
                     'details' => ['required', 'max:10000'],
                     'images' => ['required'],

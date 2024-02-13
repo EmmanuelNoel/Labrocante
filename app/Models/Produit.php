@@ -20,7 +20,7 @@ class Produit extends Model
         'details',
         'prix',
         'quantity',
-        'author_id',
+        'user_id',
         'category_product_id',
         'produit_status_id',
         'created_at',
@@ -43,5 +43,9 @@ class Produit extends Model
         return $this->hasOne(ProduitStatus::class, 'id', 'produit_status_id');
     }
 
+    public function author() : HasOne
+    {
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
 
 }

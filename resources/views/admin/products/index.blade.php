@@ -35,6 +35,7 @@
                     <th>Price</th>
                     <th>Category</th>
                     <th>Status</th>
+                    <th>Author</th>
                     <th>Created at</th>
                     <th class="text-center" style="width: 30px;">Action</th>
                 </tr>
@@ -56,7 +57,8 @@
                         <td>{{ $product->quantity }}</td>
                         <td>SR {{ $product->prix }}</td>
                         <td>{{ $product->category ? $product->category->nom : NULL }}</td>
-                        <td>{{ $product->status ? 'Active' : 'Inactive' }}</td>
+                        <td>{{ $product->status->nom}}</td>
+                        <td>{{ $product->author->name}}</td>
                         <td>{{ $product->created_at }}</td>
                         <td>
                             <div class="btn-group btn-group-sm">

@@ -1,25 +1,14 @@
 @extends('layouts.layout')
 @section('content')
-<section class="me-auto" id="conteneur">
-    <section class="col-md-1" id="menuslateral">
-        <ul>
-            <!-- Home -->
-            <li><a href="{{ route('home') }}"><i class="fas fa-home" data-title="Accueil"></i></a></li>
-            <!-- Produits / Services -->
-            <li><a href="{{route('detailproduit')}}"><i class="fa-solid fa-bag-shopping" data-title="Produit"></i></a></li>
-            <!-- Nouveautés  -->
-            <li><a href=""><i class="fa-solid fa-newspaper" data-title="Nouveautés"></i></a></li>
-             <!-- Promotions / Offres spéciales  -->
-            <li><a href=""><i class="fas fa-tags" data-title="Promotions"></i></a></li>
-            <!-- Blog / Actualités -->
-            <li><a href=""><i class="fas fa-feather-alt" data-title="Actualités"></i></a></li>
-            <!-- À Propos -->
-            <li><a href=""><i class="fas fa-book-open" data-title="À propos"></i></a></li>
-            <!-- Support -->
-            <li><a href=""><i class="fas fa-question-circle" data-title="Support"></i></a></li>
-            <!-- Login -->
-            <li class="d-none d-lg-block "><a  href="{{ route('bienvenue') }}"><i class="fa-solid fa-user" data-title="S'inscrire"></i></a></li>
-        </ul>
+    <section class="me-auto" id="conteneur">
+        @include('partials.sidebar')
+        <section id="bannierhome" class="col-md-11 p-0 d-flex align-items-center justify-content-center"
+            style="background:url('{{ asset('assets/images/Union.png') }}') no-repeat; background-size:cover">
+            <div class="text-center texte ">
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h1>
+                <a href="">S'inscrire</a>
+            </div>
+        </section>
     </section>
     <div class="produits container">
         <h2><b>Récemment Ajoutés</b></h2>
@@ -31,24 +20,19 @@
                     <div class="contentproduit">
                         <div class="square">
                             <a href="{{ route('detailproduit') }}">
-
-                                @if ($produit_recent->medias->count() > 0)
-                                    <img src="{{ asset('storage/' . $produit_recent->medias[0]->path) }}" width="60"
-                                        height="60" alt="{{ $produit_recent->medias[0]->nom }}">
-                                @else
-                                    <img src="{{ asset('admin_assets/img/no-img.png') }}" width="60" height="60"
-                                        alt="{{ $produit_recent->name }}">
-                                @endif
-                            </a>
-
+                                    @if($produit_recent->medias->count() > 0)
+                                    <img src="{{ asset('storage/' . $produit_recent->medias[0]->path) }}"
+                                         alt="{{ $produit_recent->medias[0]->nom }}">
+                                    @else
+                                        <img src="{{ asset('admin_assets/img/no-img.png') }}" width="60" height="60" alt="{{ $product->name }}">
+                                    @endif
+                                </a>
                         </div>
                         <div class="info d-flex">
                             <div>
                                 <h1>{{ $produit_recent->nom }}</h1>
-                                <p>
-                                    {{ $produit_recent->description }}
-                                </p>
-                                <h3>{{ $produit_recent->prix }} FCFA</h3>
+                                <p>{{ $produit_recent->description }}</p>
+                                <h3>{{ $produit_recent->prix }}</h3>
                             </div>
                             <div class="icons-container d-flex">
                                 <div>
@@ -62,10 +46,11 @@
                     </div>
                 </div>
             @empty
-                <p>
-                    Aucun produit n'est disponible pour le moment
+                <p class="text-center m-auto">
+                    Aucun produit ajouté récemment
                 </p>
             @endforelse
+
 
         </div>
 
@@ -130,6 +115,7 @@
                         </div>
                         <div class="icons-container d-flex">
                             <div>
+
                                 <H1><i class="bi bi-heart "></i></H1>
                             </div>
                             <div>
@@ -228,6 +214,7 @@
                         <a href=""><img src="{{ asset('assets/images/image7.jpg') }}" alt="reussite 1"></a>
                     </div>
                     <div class="info d-flex">
+
                         <div>
                             <h1>Nom produit</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
@@ -325,6 +312,8 @@
                             <h3>25000 FCFA</h3>
                         </div>
                         <div class="icons-container d-flex">
+
+
                             <div>
                                 <H1><i class="bi bi-heart "></i></H1>
                             </div>
@@ -424,6 +413,8 @@
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
             <div class="produit">

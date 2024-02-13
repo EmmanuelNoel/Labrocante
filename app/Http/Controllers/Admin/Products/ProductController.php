@@ -8,10 +8,12 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProductRequest;
 use App\Models\Produit;
 use App\Models\ProduitMedia;
+use App\Models\ProduitStatus;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Redirect;
 use App\Services\ImageService;
 use App\Traits\ImageUploadTrait;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -23,8 +25,8 @@ class ProductController extends Controller
     public function index()
     {
         //
-        $products = Produit::with('category', 'medias')->paginate(10);
-      
+        $products = Produit::with('category', 'medias', 'status', 'author')->paginate(10);
+
         return view('admin.products.index', compact('products'));
     }
 
@@ -37,7 +39,8 @@ class ProductController extends Controller
     {
         //
         $categories = CategoryProduct::all();
-        return view('admin.products.create', compact('categories'));
+        $statuses = ProduitStatus::all();
+        return view('admin.products.create', compact('categories', 'statuses'));
     }
 
     /**
@@ -48,10 +51,13 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request): RedirectResponse
     {
-        // dd($request->all());
-
         if ($request->validated()) {
-            $product = Produit::create($request->except('images', '_token'));
+        //    $product = Produit::create($request->except('images', '_token'));
+              $user_id = Auth::user()->id;
+            $product = Produit::create(array_merge(
+                $request->except('images', '_token'),
+                ['user_id' => $user_id]
+            ));
 
             if ($request->images && count($request->images) > 0) {
                 (new ImageService())->storeProductImages($request->images, $product);
@@ -78,6 +84,8 @@ class ProductController extends Controller
     public function show($id)
     {
         //
+        $product = Produit::findOrFail($id)->with('category', 'medias', 'status', 'author')->first();
+        return view('admin.products.show', compact('product'));
     }
 
     /**
