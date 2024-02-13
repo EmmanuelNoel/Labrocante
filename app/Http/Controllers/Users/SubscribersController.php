@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Users;
 
 use App\Models\Subscribers;
 use Illuminate\Http\Request;
@@ -8,10 +8,6 @@ use Illuminate\Routing\Controller;
 
 class SubscribersController extends Controller
 {
-    public function create()
-    {
-        return view('home');
-    }
 
     public function store(Request $request)
     {
@@ -27,9 +23,9 @@ class SubscribersController extends Controller
             $subscribers->save();
 
             if ($subscribers) {
-                return redirect()->route('subscribers.create')->with('success', 'Vous êtes abonné avec succès à notre newsletter !');
+                return redirect()->back()->with('success', 'Vous êtes abonné avec succès à notre newsletter !');
             } else {
-                return redirect()->route('subscribers.create')->with('echoue', "Erreur lors de l'abonnement.");
+                return redirect()->back()->with('echoue', "Erreur lors de l'abonnement.");
             }
         }
     }

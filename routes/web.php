@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
-use App\Http\Controllers\SubscribersController;
 use App\Http\Controllers\Users\ProfileController;
-use App\Http\Controllers\Otp\VerificationController;
 use App\Http\Controllers\Users\DashboardController;
+use App\Http\Controllers\Otp\VerificationController;
+use App\Http\Controllers\Users\SubscribersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,8 +44,8 @@ Route::get('panier', function () {
 
 
 // Newsletters
-Route::get('/subscribers', [SubscribersController::class, 'create'])->name('subscribers.store');
-Route::post('/subscribers', [SubscribersController::class, 'store'])->name('subscribers.create');
+//Route::get('/subscribers', [SubscribersController::class, 'create'])->name('subscribers.store');
+Route::post('/subscribers', [SubscribersController::class, 'store'])->name('subscribers.store');
 
 // Otp routes
 Route::get('/verify-otp/{id}', [VerificationController::class, 'showVerificationForm'])->name('verify-otp');
