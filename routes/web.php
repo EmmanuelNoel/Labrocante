@@ -5,6 +5,7 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\SubscribersController;
 use App\Http\Controllers\Users\ProfileController;
 use App\Http\Controllers\Otp\VerificationController;
+use App\Http\Controllers\Users\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,7 +62,7 @@ Route::middleware('auth')->group(function () {
 
 //User dashboard
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', [ProfileController::class, 'edit'])->name('dashboard');
+  Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
 });
 
