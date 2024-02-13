@@ -1,32 +1,21 @@
 @extends('layouts.layout')
 @section('content')
     <div class="ficheproduit container">
-        <section>
-            <div class="d-flex">
+        <section class="mesdetailproduits">
+            <div class="d-flex detailproduit">
                 <div class="infoproduit">
                     <div class="imgproduits ">
                         <img src="{{ asset('assets/images/image1.jpg') }}" alt="Stage 1">
                     </div>
-                    <div class="text-center">
-                        <div class=" mt-3 row">
+                    <div class="text-center mt-3">
+                        <div class="row">
                             <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner" role="listbox">
                                     <div class="carousel-item active">
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
-                                                    <img src="{{ asset('assets/images/image4.png') }}"
-                                                    alt="Image 3" class="img-fluid">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item ">
-                                        <div class="col-md-4">
-                                            <div class="card">
-                                                <div class="card-img">
-                                                    <img src="{{ asset('assets/images/image4.png') }}"
-                                                    alt="Image 3" class="img-fluid">
+                                                    <img src="https://via.placeholder.com/700x500.png/CB997E/333333?text=1" class="img-fluid">
                                                 </div>
                                             </div>
                                         </div>
@@ -35,19 +24,9 @@
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
-                                                    <img src="{{ asset('assets/images/image4.png') }}"
-                                                    alt="Image 3" class="img-fluid">
+                                                    <img src="https://via.placeholder.com/700x500.png/DDBEA9/333333?text=2" class="img-fluid">
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item ">
-                                        <div class="col-md-4">
-                                            <div class="card">
-                                                <div class="card-img">
-                                                    <img src="{{ asset('assets/images/image4.png') }}"
-                                                    alt="Image 3" class="img-fluid">
-                                                </div>
+                                                <div class="card-img-overlay">Slide 2</div>
                                             </div>
                                         </div>
                                     </div>
@@ -55,9 +34,9 @@
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
-                                                    <img src="{{ asset('assets/images/image4.png') }}"
-                                                    alt="Image 3" class="img-fluid">
+                                                    <img src="https://via.placeholder.com/700x500.png/FFE8D6/333333?text=3" class="img-fluid">
                                                 </div>
+                                                <div class="card-img-overlay">Slide 3</div>
                                             </div>
                                         </div>
                                     </div>
@@ -65,9 +44,29 @@
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
-                                                    <img src="{{ asset('assets/images/image4.png') }}"
-                                                    alt="Image 3" class="img-fluid">
+                                                    <img src="https://via.placeholder.com/700x500.png/B7B7A4/333333?text=4" class="img-fluid">
                                                 </div>
+                                                <div class="card-img-overlay">Slide 4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <img src="https://via.placeholder.com/700x500.png/A5A58D/333333?text=5" class="img-fluid">
+                                                </div>
+                                                <div class="card-img-overlay">Slide 5</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-img">
+                                                    <img src="https://via.placeholder.com/700x500.png/6B705C/eeeeee?text=6" class="img-fluid">
+                                                </div>
+                                                <div class="card-img-overlay">Slide 6</div>
                                             </div>
                                         </div>
                                     </div>
@@ -98,22 +97,38 @@
                     <div class="d-flex prix">
                         <h3>25000 FCFA</h3>
                         <div class="d-flex icone ms-auto">
-                            <H3><i class="bi bi-heart me-5" style="color: #D84545"></i></H3>
-                            <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                            <H3><a href="" style="color: #D84545"><i class="bi bi-heart me-5"></i></a></H3>
+                            <h3><a href="" style="color: #274060"><i class="bi bi-cart-dash-fill"></i></a></h3>
                         </div>
                     </div>
                     <div class="line"></div>
-                    <span class="liens"><a href="" >Acheter</a></span>
+                    <span class="liens"><a href="">Acheter</a></span>
                 </div>
             </div>
         </section>
         <section class="description_service">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hendrerit gravida rutrum quisque non tellus orci. Arcu bibendum at varius vel pharetra vel turpis. Ut etiam sit amet nisl purus in mollis. Diam in arcu cursus euismod quis viverra. Pellentesque sit amet porttitor eget dolor morbi non arcu. Vulputate dignissim suspendisse in est ante. Urna et pharetra pharetra massa massa. Sed elementum tempus egestas sed sed risus. Gravida quis blandit turpis cursus in. Gravida neque convallis a cras semper auctor neque vitae tempus. Convallis tellus id interdum velit laoreet id. Odio morbi quis commodo odio aenean sed adipiscing. Libero id faucibus nisl tincidunt. Massa enim nec dui nunc. Lectus sit amet est placerat. Scelerisque mauris pellentesque pulvinar pellentesque. Quis ipsum suspendisse ultrices gravida dictum fusce. Urna id volutpat lacus laoreet non curabitur gravida.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Hendrerit gravida rutrum quisque non tellus orci. Arcu bibendum at varius vel pharetra vel
+                turpis. Ut etiam sit amet nisl purus in mollis. Diam in arcu cursus euismod quis viverra. Pellentesque sit
+                amet porttitor eget dolor morbi non arcu. Vulputate dignissim suspendisse in est ante. Urna et pharetra
+                pharetra massa massa. Sed elementum tempus egestas sed sed risus. Gravida quis blandit turpis cursus in.
+                Gravida neque convallis a cras semper auctor neque vitae tempus. Convallis tellus id interdum velit laoreet
+                id. Odio morbi quis commodo odio aenean sed adipiscing. Libero id faucibus nisl tincidunt. Massa enim nec
+                dui nunc. Lectus sit amet est placerat. Scelerisque mauris pellentesque pulvinar pellentesque. Quis ipsum
+                suspendisse ultrices gravida dictum fusce. Urna id volutpat lacus laoreet non curabitur gravida.</p>
         </section>
         <section class="apercu">
             <h2>Apercu</h2>
             <img src="{{ asset('assets/images/image7.jpg') }}" alt="Stage 1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hendrerit gravida rutrum quisque non tellus orci. Arcu bibendum at varius vel pharetra vel turpis. Ut etiam sit amet nisl purus in mollis. Diam in arcu cursus euismod quis viverra. Pellentesque sit amet porttitor eget dolor morbi non arcu. Vulputate dignissim suspendisse in est ante. Urna et pharetra pharetra massa massa. Sed elementum tempus egestas sed sed risus. Gravida quis blandit turpis cursus in. Gravida neque convallis a cras semper auctor neque vitae tempus. Convallis tellus id interdum velit laoreet id. Odio morbi quis commodo odio aenean sed adipiscing. Libero id faucibus nisl tincidunt. Massa enim nec dui nunc. Lectus sit amet est placerat. Scelerisque mauris pellentesque pulvinar pellentesque. Quis ipsum suspendisse ultrices gravida dictum fusce. Urna id volutpat lacus laoreet non curabitur gravida.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Hendrerit gravida rutrum quisque non tellus orci. Arcu bibendum at varius vel pharetra vel
+                turpis. Ut etiam sit amet nisl purus in mollis. Diam in arcu cursus euismod quis viverra. Pellentesque sit
+                amet porttitor eget dolor morbi non arcu. Vulputate dignissim suspendisse in est ante. Urna et pharetra
+                pharetra massa massa. Sed elementum tempus egestas sed sed risus. Gravida quis blandit turpis cursus in.
+                Gravida neque convallis a cras semper auctor neque vitae tempus. Convallis tellus id interdum velit laoreet
+                id. Odio morbi quis commodo odio aenean sed adipiscing. Libero id faucibus nisl tincidunt. Massa enim nec
+                dui nunc. Lectus sit amet est placerat. Scelerisque mauris pellentesque pulvinar pellentesque. Quis ipsum
+                suspendisse ultrices gravida dictum fusce. Urna id volutpat lacus laoreet non curabitur gravida.</p>
         </section>
         <section class="aproposvendeur">
             <h2>Message du créateur</h2>
@@ -124,10 +139,19 @@
                         <h3>Nom vendeur</h3>
                         <p>Site vendeur</p>
                     </div>
-                <div class="verticalline ms-auto me-3"></div>
+                    <div class="verticalline ms-auto me-3"></div>
                 </div>
                 <div class="col-9 textevendeur">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hendrerit gravida rutrum quisque non tellus orci. Arcu bibendum at varius vel pharetra vel turpis. Ut etiam sit amet nisl purus in mollis. Diam in arcu cursus euismod quis viverra. Pellentesque sit amet porttitor eget dolor morbi non arcu. Vulputate dignissim suspendisse in est ante. Urna et pharetra pharetra massa massa. Sed elementum tempus egestas sed sed risus. Gravida quis blandit turpis cursus in. Gravida neque convallis a cras semper auctor neque vitae tempus. Convallis tellus id interdum velit laoreet id. Odio morbi quis commodo odio aenean sed adipiscing. Libero id faucibus nisl tincidunt. Massa enim nec dui nunc. Lectus sit amet est placerat. Scelerisque mauris pellentesque pulvinar pellentesque. Quis ipsum suspendisse ultrices gravida dictum fusce. Urna id volutpat lacus laoreet non curabitur gravida.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Hendrerit gravida rutrum quisque non tellus orci. Arcu bibendum at varius
+                        vel pharetra vel turpis. Ut etiam sit amet nisl purus in mollis. Diam in arcu cursus euismod quis
+                        viverra. Pellentesque sit amet porttitor eget dolor morbi non arcu. Vulputate dignissim suspendisse
+                        in est ante. Urna et pharetra pharetra massa massa. Sed elementum tempus egestas sed sed risus.
+                        Gravida quis blandit turpis cursus in. Gravida neque convallis a cras semper auctor neque vitae
+                        tempus. Convallis tellus id interdum velit laoreet id. Odio morbi quis commodo odio aenean sed
+                        adipiscing. Libero id faucibus nisl tincidunt. Massa enim nec dui nunc. Lectus sit amet est
+                        placerat. Scelerisque mauris pellentesque pulvinar pellentesque. Quis ipsum suspendisse ultrices
+                        gravida dictum fusce. Urna id volutpat lacus laoreet non curabitur gravida.</p>
                 </div>
             </div>
         </section>
@@ -144,14 +168,13 @@
         let next = el.nextElementSibling
         for (var i=1; i<minPerSlide; i++) {
             if (!next) {
-                // wrap carousel by using first child
-                next = items[0]
-            }
-            let cloneChild = next.cloneNode(true)
-            el.appendChild(cloneChild.children[0])
-            next = next.nextElementSibling
-        }
+        // wrap carousel by using first child
+        next = items[0]
+    }
+    let cloneChild = next.cloneNode(true)
+    el.appendChild(cloneChild.children[0])
+    next = next.nextElementSibling
+    }
     })
-
 </script>
 @endsection
