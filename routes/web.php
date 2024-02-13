@@ -43,11 +43,11 @@ Route::get('panier', function () {
 })->name('panier');
 
 // Newsletters
-Route::get('/subscribers', [NewSubscriberController::class, 'create'])->name('subscribers.store');
-Route::post('/subscribers', [NewSubscriberController::class, 'store'])->name('subscribers.create');
+//Route::get('/subscribers', [NewSubscriberController::class, 'create'])->name('subscribers.store');
+Route::post('/subscribers', [NewSubscriberController::class, 'store'])->name('subscribers.store');
 
 // Otp routes
-Route::get('/verify-otp/{id}', [VerificationController::class, 'shgowVerificationForm'])->name('verify-otp');
+Route::get('/verify-otp/{id}', [VerificationController::class, 'showVerificationForm'])->name('verify-otp');
 Route::post('/validate-otp', [VerificationController::class, 'valideOtpCode'])->name('validate-otp');
 Route::get('/sendOtpCode/{id}', [VerificationController::class, 'sendOtpCode'])->name('sendOtpCode');
 Route::get('/verificationSuccessfully', [VerificationController::class, 'verificationSuccessfully'])->name('verificationSuccessfully');
