@@ -14,6 +14,7 @@ class WelcomeController extends Controller
     {
         $status = ProduitStatus::where('nom', 'valide')->first();
         $produits_recents = Produit::where('produit_status_id', $status->id)->with('category', 'medias')->orderBy('created_at', 'desc')->take(4)->get();
-      return view('home', compact('produits_recents'));
+        $fil_actualites = Produit::where('produit_status_id', $status->id)->with('category', 'medias')->orderBy('created_at', 'desc')->paginate(1);
+        return view('home', compact('produits_recents', 'fil_actualites'));
     }
 }

@@ -20,13 +20,14 @@
                     <div class="contentproduit">
                         <div class="square">
                             <a href="{{ route('detailproduit') }}">
-                                    @if($produit_recent->medias->count() > 0)
+                                @if ($produit_recent->medias->count() > 0)
                                     <img src="{{ asset('storage/' . $produit_recent->medias[0]->path) }}"
-                                         alt="{{ $produit_recent->medias[0]->nom }}">
-                                    @else
-                                        <img src="{{ asset('admin_assets/img/no-img.png') }}" width="60" height="60" alt="{{ $product->name }}">
-                                    @endif
-                                </a>
+                                        alt="{{ $produit_recent->medias[0]->nom }}">
+                                @else
+                                    <img src="{{ asset('admin_assets/img/no-img.png') }}" width="60" height="60"
+                                        alt="{{ $product->name }}">
+                                @endif
+                            </a>
                         </div>
                         <div class="info d-flex">
                             <div>
@@ -164,295 +165,60 @@
         <div class="line"></div>
         <br>
         <div class="grid-container ">
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image10.png') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="info d-flex">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
+            @forelse ($fil_actualites as $fil_actualite)
+                <div class="produit">
+                    <div class="contentproduit">
+                        <div class="square">
+                            <a href="">
+                                @if ($fil_actualite->medias->count() > 0)
+                                    <img src="{{ asset('storage/' . $fil_actualite->medias[0]->path) }}"
+                                        alt="{{ $fil_actualite->medias[0]->nom }}">
+                                @else
+                                    <img src="{{ asset('admin_assets/img/no-img.png') }}" width="60" height="60"
+                                        alt="{{ $fil_actualite->name }}">
+                                @endif
+                            </a>
                         </div>
-                        <div class="icons-container d-flex">
+                        <div class="info d-flex">
                             <div>
-                                <H1><i class="bi bi-heart "></i></H1>
+                                <h1>{{ $fil_actualite->nom }}</h1>
+                                <p>{{ $fil_actualite->description }}</p>
+                                <h3>{{ $fil_actualite->prix }}</h3>
                             </div>
-                            <div>
-                                <h3><i class="bi bi-cart-dash-fill"></i></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image6.jpg') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="info d-flex">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                        </div>
-                        <div class="icons-container d-flex">
-                            <div>
-                                <H1><i class="bi bi-heart "></i></H1>
-                            </div>
-                            <div>
-                                <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                            <div class="icons-container d-flex">
+                                <div>
+                                    <H1><i class="bi bi-heart "></i></H1>
+                                </div>
+                                <div>
+                                    <h3><i class="bi bi-cart-dash-fill"></i></h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image7.jpg') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="info d-flex">
+            @empty
+                <p class="text-center m-auto">
+                    Aucun produit ajouté récemment
+                </p>
+            @endforelse
 
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                        </div>
-                        <div class="icons-container d-flex">
-                            <div>
-                                <H1><i class="bi bi-heart "></i></H1>
-                            </div>
-                            <div>
-                                <h3><i class="bi bi-cart-dash-fill"></i></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image6.jpg') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="info d-flex">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                        </div>
-                        <div class="icons-container d-flex">
-                            <div>
-                                <H1><i class="bi bi-heart "></i></H1>
-                            </div>
-                            <div>
-                                <h3><i class="bi bi-cart-dash-fill"></i></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {{ $fil_actualites->links('pagination::simple-bootstrap-4') }}
+
         </div>
-        <div class="grid-container ">
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href="{{ route('detailproduit') }}"><img src="{{ asset('assets/images/image5.png') }}"
-                                alt="reussite 1"></a>
-                    </div>
-                    <div class="info d-flex">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                        </div>
-                        <div class="icons-container d-flex">
-                            <div>
-                                <H1><i class="bi bi-heart "></i></H1>
-                            </div>
-                            <div>
-                                <h3><i class="bi bi-cart-dash-fill"></i></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image6.jpg') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="info d-flex">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                        </div>
-                        <div class="icons-container d-flex">
-                            <div>
-                                <H1><i class="bi bi-heart "></i></H1>
-                            </div>
-                            <div>
-                                <h3><i class="bi bi-cart-dash-fill"></i></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image7.jpg') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="info d-flex">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                        </div>
-                        <div class="icons-container d-flex">
 
-
-                            <div>
-                                <H1><i class="bi bi-heart "></i></H1>
-                            </div>
-                            <div>
-                                <h3><i class="bi bi-cart-dash-fill"></i></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image4.png') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="info d-flex">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                        </div>
-                        <div class="icons-container d-flex">
-                            <div>
-                                <H1><i class="bi bi-heart "></i></H1>
-                            </div>
-                            <div>
-                                <h3><i class="bi bi-cart-dash-fill"></i></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="grid-container ">
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href="{{ route('detailproduit') }}"><img src="{{ asset('assets/images/image1.jpg') }}"
-                                alt="reussite 1"></a>
-                    </div>
-                    <div class="info d-flex">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                        </div>
-                        <div class="icons-container d-flex">
-                            <div>
-                                <H1><i class="bi bi-heart "></i></H1>
-                            </div>
-                            <div>
-                                <h3><i class="bi bi-cart-dash-fill"></i></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image2.jpg') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="info d-flex">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                        </div>
-                        <div class="icons-container d-flex">
-                            <div>
-                                <H1><i class="bi bi-heart "></i></H1>
-                            </div>
-                            <div>
-                                <h3><i class="bi bi-cart-dash-fill"></i></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image7.jpg') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="info d-flex">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                        </div>
-                        <div class="icons-container d-flex">
-                            <div>
-                                <H1><i class="bi bi-heart "></i></H1>
-                            </div>
-                            <div>
-                                <h3><i class="bi bi-cart-dash-fill"></i></h3>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="produit">
-                <div class="contentproduit">
-                    <div class="square">
-                        <a href=""><img src="{{ asset('assets/images/image4.png') }}" alt="reussite 1"></a>
-                    </div>
-                    <div class="info d-flex">
-                        <div>
-                            <h1>Nom produit</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                            <h3>25000 FCFA</h3>
-                        </div>
-                        <div class="icons-container d-flex">
-                            <div>
-                                <H1><i class="bi bi-heart "></i></H1>
-                            </div>
-                            <div>
-                                <h3><i class="bi bi-cart-dash-fill"></i></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="seemore container mb-5 text-center  d-block align-items-center justify-content-center ">
         <form action="{{ route('subscribers.store') }}" method="post">
             @csrf
             @if (session('success'))
-                <div class="alert alert-primary  animate__animated animate__bounceInRight alert-dismissible"
-                    role="alert" id="primary">
+                <div class="alert alert-primary  animate__animated animate__bounceInRight alert-dismissible" role="alert"
+                    id="primary">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     {{ session('success') }}
                 </div>
             @elseif(session('existe'))
-                <div class="alert alert-danger  animate__animated animate__bounceInRight alert-dismissible" role="alert"
-                    id="info">
+                <div class="alert alert-danger show-popup col-md-4 animate__animated animate__bounceInRight alert-dismissible" role="alert"
+                    id="info" data-show-popup="true">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     {{ session('existe') }}
                 </div>
@@ -470,5 +236,6 @@
         </form>
     </div>
     <script src="https://kit.fontawesome.com/3a537738e0.js" crossorigin="anonymous"></script>
+    <script src="{{asset('home.js')}}"></script>
     @include('partials.footer')
 @endsection

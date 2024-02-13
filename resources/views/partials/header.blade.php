@@ -25,11 +25,6 @@
                         <span><i class="bi bi-bell"></i></span>
                     </a>
                 </li>
-                <li class="nav-item mx-4 d-lg-none  offset-md-8 me-lg-5 active" id="dansuntemps">
-                    <a class="nav-link icons" href="{{ route('bienvenue') }}">
-                        <span><i class="fa-regular fa-user"></i></span>
-                    </a>
-                </li>
                 @auth
                     <li class="nav-item">
                         <a class="nav-link inscrire" href="{{ route('logout') }}"
@@ -45,7 +40,7 @@
                 @guest
                     <li class="nav-item">
                         <a class="nav-link inscrire" href="{{ route('bienvenue') }}"><i
-                                class="bi bi-person-circle"></i>&nbsp;S'inscrire</a>
+                                class="bi bi-person-circle"></i><span class="d-lg-block d-none">&nbsp;S'inscrire</span></a>
                     </li>
                 @endguest
                 {{-- <li class="nav-item">

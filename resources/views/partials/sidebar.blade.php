@@ -16,8 +16,5 @@
         <li><a href=""><i class="fas fa-book-open" data-title="À propos"></i></a></li>
         <!-- Support -->
         <li><a href=""><i class="fas fa-question-circle" data-title="Support"></i></a></li>
-        <!-- Login -->
-        <li class="d-none d-lg-block "><a href="{{ route('bienvenue') }}"><i class="fa-solid fa-user"
-                    data-title="S'inscrire"></i></a></li>
     </ul>
 </section>

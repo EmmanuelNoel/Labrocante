@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-    <section id="connexionpage" class="d-flex align-items-center justify-content-center">
+    <section id="connexionpage" class="d-flex align-items-center justify-content-center mb-5">
         <div class="connexion">
             <div class="">
                 <h2>Bienvenue!</h2>

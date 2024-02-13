@@ -14,6 +14,7 @@
     <link href="{{ asset('assets/css/media.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="resources/js/brocante.js"></script>
+    <script src="{{asset('home.js')}}"></script>
     @yield('css')
 </head>
 
