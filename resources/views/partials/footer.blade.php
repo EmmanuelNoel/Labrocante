@@ -17,7 +17,7 @@
                   <h5>Découvrir</h5>
                   <ul class="list-unstyled">
                     <li>
-                      <a href="#!">Comment ca marche</a>
+                      <a href="#!">Comment ça marche ?</a>
                     </li>
                     <li>
                       <a href="#!">Nouveauté</a>

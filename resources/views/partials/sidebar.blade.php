@@ -4,7 +4,7 @@
         <li><a href=""><i class="fas fa-home" data-title="Accueil"></i></a></li>
         <li><a href="{{ route('dashboard') }}"><i class="fas fa-dashboard" data-title="Dashboard"></i></a></li>
         <!-- Produits / Services -->
-        <li><a href="{{ route('detailproduit') }}"><i class="fa-solid fa-bag-shopping" data-title="Produit"></i></a>
+        <li><a href=""><i class="fa-solid fa-bag-shopping" data-title="Produit"></i></a>
         </li>
         <!-- Nouveautés  -->
         <li><a href=""><i class="fa-solid fa-newspaper" data-title="Nouveautés"></i></a></li>

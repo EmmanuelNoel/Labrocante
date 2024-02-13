@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\Otp\VerificationController;
-use App\Http\Controllers\Users\DashboardController;
-use App\Http\Controllers\Users\ProfileController;
-use App\Http\Controllers\NewSubscriberController;
-use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\Users\ProfileController;
+use App\Http\Controllers\Users\DashboardController;
+use App\Http\Controllers\Otp\VerificationController;
+use App\Http\Controllers\Produits\ProduitsController;
+use App\Http\Controllers\Users\NewSubscriberController;
 
 /*
  * |--------------------------------------------------------------------------
@@ -23,21 +24,24 @@ Route::get('/', [WelcomeController::class, 'index'])->name('home');
 Route::get('header', function () {
     return view('header2');
 })->name('header');
+
 Route::get('bienvenue', function () {
     return view('auth.bienvenue');
 })->name('bienvenue');
-Route::get('detailproduit', function () {
-    return view('produits.detailproduit');
-})->name('detailproduit');
+
+Route::get('detailproduit/{id}', [ProduitsController::class, 'produit_details'])->name('detailproduit');
+
 Route::get('suggestion', function () {
     return view('suggestion');
 })->name('suggestion');
+
 Route::get('acheter', function () {
     return view('categories.categories');
 })->name('categories');
 Route::get('articlefavoris', function () {
     return view('articles.articlefavoris');
 })->name('articlefavoris');
+
 Route::get('panier', function () {
     return view('panier');
 })->name('panier');

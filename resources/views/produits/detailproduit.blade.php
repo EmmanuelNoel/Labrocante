@@ -5,71 +5,29 @@
             <div class="d-flex detailproduit">
                 <div class="infoproduit">
                     <div class="imgproduits ">
-                        <img src="{{ asset('assets/images/image1.jpg') }}" alt="Stage 1">
+                        @if ($produit->medias->count() > 0)
+                                    <img src="{{ asset('storage/' . $produit->medias[0]->path) }}"
+                                        alt="{{ $produit->medias[0]->nom }}">
+                                @else
+                                    <img src="{{ asset('admin_assets/img/no-img.png') }}" width="60" height="60"
+                                        alt="{{ $produit->name }}">
+                                @endif
                     </div>
                     <div class="text-center mt-3">
                         <div class="row">
                             <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner" role="listbox">
-                                    <div class="carousel-item active">
+                                    @foreach ( $produit->medias as $media )
+                                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                                         <div class="col-md-4">
                                             <div class="card">
                                                 <div class="card-img">
-                                                    <img src="https://via.placeholder.com/700x500.png/CB997E/333333?text=1" class="img-fluid">
+                                                    <img src="{{ asset('storage/' . $media->path) }}" class="img-fluid" alt="{{ $media->nom }}">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-item">
-                                        <div class="col-md-4">
-                                            <div class="card">
-                                                <div class="card-img">
-                                                    <img src="https://via.placeholder.com/700x500.png/DDBEA9/333333?text=2" class="img-fluid">
-                                                </div>
-                                                <div class="card-img-overlay">Slide 2</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="col-md-4">
-                                            <div class="card">
-                                                <div class="card-img">
-                                                    <img src="https://via.placeholder.com/700x500.png/FFE8D6/333333?text=3" class="img-fluid">
-                                                </div>
-                                                <div class="card-img-overlay">Slide 3</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="col-md-4">
-                                            <div class="card">
-                                                <div class="card-img">
-                                                    <img src="https://via.placeholder.com/700x500.png/B7B7A4/333333?text=4" class="img-fluid">
-                                                </div>
-                                                <div class="card-img-overlay">Slide 4</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="col-md-4">
-                                            <div class="card">
-                                                <div class="card-img">
-                                                    <img src="https://via.placeholder.com/700x500.png/A5A58D/333333?text=5" class="img-fluid">
-                                                </div>
-                                                <div class="card-img-overlay">Slide 5</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="col-md-4">
-                                            <div class="card">
-                                                <div class="card-img">
-                                                    <img src="https://via.placeholder.com/700x500.png/6B705C/eeeeee?text=6" class="img-fluid">
-                                                </div>
-                                                <div class="card-img-overlay">Slide 6</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                                 <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -82,20 +40,12 @@
                     </div>
                 </div>
                 <div class=" infodetail ms-auto me-5">
-                    <h1>Nom du service</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet provident est, delectus rerum
-                        repellat
-                        dolor alias maxime pariatur minus veritatis a ex, dolorem perferendis, quibusdam minima.
-                        Officia ab
-                        nobis modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. A unde maiores modi
-                        temporibus
-                        id nihil excepturi voluptas, tenetur vero. Quod illo nisi ex quaerat atque, impedit sint
-                        harum fugit
-                        delectus. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    <h1>{{ $produit->nom }}</h1>
+                    <p>{{ $produit->details }}
                     </p>
                     <p class="tarifunique">Tarif unique de</p>
                     <div class="d-flex prix">
-                        <h3>25000 FCFA</h3>
+                        <h3>{{ $produit->prix }}</h3>
                         <div class="d-flex icone ms-auto">
                             <H3><a href="" style="color: #D84545"><i class="bi bi-heart me-5"></i></a></H3>
                             <h3><a href="" style="color: #274060"><i class="bi bi-cart-dash-fill"></i></a></h3>
@@ -107,15 +57,7 @@
             </div>
         </section>
         <section class="description_service">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Hendrerit gravida rutrum quisque non tellus orci. Arcu bibendum at varius vel pharetra vel
-                turpis. Ut etiam sit amet nisl purus in mollis. Diam in arcu cursus euismod quis viverra. Pellentesque sit
-                amet porttitor eget dolor morbi non arcu. Vulputate dignissim suspendisse in est ante. Urna et pharetra
-                pharetra massa massa. Sed elementum tempus egestas sed sed risus. Gravida quis blandit turpis cursus in.
-                Gravida neque convallis a cras semper auctor neque vitae tempus. Convallis tellus id interdum velit laoreet
-                id. Odio morbi quis commodo odio aenean sed adipiscing. Libero id faucibus nisl tincidunt. Massa enim nec
-                dui nunc. Lectus sit amet est placerat. Scelerisque mauris pellentesque pulvinar pellentesque. Quis ipsum
-                suspendisse ultrices gravida dictum fusce. Urna id volutpat lacus laoreet non curabitur gravida.</p>
+            <p>{{ $produit->description }}</p>
         </section>
         <section class="apercu">
             <h2>Apercu</h2>
