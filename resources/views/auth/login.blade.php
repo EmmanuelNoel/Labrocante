@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
-    <section id="connexionpage" class="d-flex align-items-center justify-content-center">
-        <div class="usernameconfirm container">
+    <section id="connexionpage " class="d-flex align-items-center justify-content-center mb-5">
+        <div class="usernameconfirm container ">
             <div>
                 <h2 style="margin: 0">Connexion</h2>
                 <!-- Session Status -->
@@ -39,11 +39,11 @@
                     </div>
                     <button type="submit" class="btn mt-2 mb-3">Continuer</button>
 
-                    <div class="flex items-center justify-end mt-4">
+                    <div class="flex items-center justify-end mt-2">
                         @if (Route::has('password.request'))
                             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                 href="{{ route('password.request') }}">
-                                {{ __('Forgot your password?') }}
+                                {{ __('Mot de passe oublié?') }}
                             </a>
                         @endif
 

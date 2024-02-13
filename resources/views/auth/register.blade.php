@@ -2,7 +2,7 @@
 
 @extends('layouts.layout')
 @section('content')
-    <section id="connexionpage" class="d-flex align-items-center justify-content-center">
+    <section id="connexionpage" class="d-flex align-items-center justify-content-center mb-5">
         <div class="usernameconfirm container mb-3">
             <div>
                 <h2 style="margin: 0">Inscription</h2>
