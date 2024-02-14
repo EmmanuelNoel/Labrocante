@@ -123,7 +123,7 @@
     <script src="{{ asset('admin_assets/vendor/chart.js/Chart.min.js') }}"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js') }}"></script>
+    <script src="{{ asset('admin_assets/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('admin_assets/js/demo/chart-pie-demo.js') }}"></script>
 
     <script src="{{ asset('admin_assets/js/custom.js') }}"></script>

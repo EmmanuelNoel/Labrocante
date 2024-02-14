@@ -13,7 +13,7 @@
         <!-- Light Logo-->
         <a href="{{route('home')}}" class="logo logo-light">
             <span class="logo-sm">
-            <img src="{{ asset('assets/images/Logo 1.png')}}" alt="" height="45">
+                <img src="{{ asset('assets/images/Logo 1.png')}}" alt="" height="45">
 
             </span>
             <span class="logo-lg">
@@ -59,7 +59,7 @@
                 <li class="menu-title text-center"><span data-key="t-menu">Tableau de bord</span></li>
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-                     <span data-key="t-dashboards">Historiques</span>
+                        <span data-key="t-dashboards">Historiques</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarDashboards">
                         <ul class="nav nav-sm flex-column">
@@ -84,61 +84,64 @@
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarApps">
                         <ul class="nav nav-sm flex-column">
-                        
-                                        <li class="nav-item">
-                                            <a href="apps-calendar.html" class="nav-link" data-key="t-main-calender">Statistique de service en attente </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="apps-calendar.html" class="nav-link" data-key="t-main-calender">Statistique de service actif </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="apps-calendar-month-grid.html" class="nav-link" data-key="t-month-grid"> Statistique de service vendus </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="apps-calendar-month-grid.html" class="nav-link" data-key="t-month-grid"> Statistique de service en attente de validation</a>
-                                        </li>
-                                    </ul>
-                                </div>
+
                             <li class="nav-item">
-                                <a href="apps-chat.html" class="nav-link" data-key="t-chat"> Services </a>
+                                <a href="apps-calendar.html" class="nav-link" data-key="t-main-calender">Statistique de service en attente </a>
                             </li>
-                            
                             <li class="nav-item">
-                                <a href="apps-chat.html" class="nav-link" data-key="t-chat"> Chat </a>
+                                <a href="apps-calendar.html" class="nav-link" data-key="t-main-calender">Statistique de service actif </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="apps-calendar-month-grid.html" class="nav-link" data-key="t-month-grid"> Statistique de service vendus </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="apps-calendar-month-grid.html" class="nav-link" data-key="t-month-grid"> Statistique de service en attente de validation</a>
                             </li>
                         </ul>
                     </div>
+                <li class="nav-item">
+                    <a href="apps-chat.html" class="nav-link" data-key="t-chat"> Services </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="apps-chat.html" class="nav-link" data-key="t-chat"> Chat </a>
                 </li>
             </ul>
-            <div class="compte">
-                <h4 class="m-3">Compte</h4>
-            <li class="nav-item " id="oaolink">
-                            <a href="#sidebarCRM" class="nav-link m-3"> Notifications
-                            </a>
-                            </li>
-                            <li class="nav-item " id="oaolink">
-                                <a href="" class="nav-link m-3"> Paramètre
-                                </a>
-                            </li>
-                            <li class="nav-item" id="oaolink">
-                                <a href="" class="nav-link m-3">
-                                Profil
-                                </a>
-                        </li>
-            </div>
-            <div class="disconnect m-3">
-            <a class="nav-link inscrire col-md-1 text-center" href="{{ route('logout') }}"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Déconnexion
-                            &nbsp;&nbsp;<i class="bi bi-person-circle"></i>
-                        </a>
-
-                        <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
-                            @csrf
-                        </form>
-            </div>
         </div>
-        <!-- Sidebar -->
-    </div>
+        </li>
+        </ul>
+        <div class="compte">
+            <h4 class="m-3">Compte</h4>
+            <li class="nav-item " id="oaolink">
+                <a href="#sidebarCRM" class="nav-link m-3"><i class="fas fa-bell"></i>
+                    Notifications
+                </a>
+            </li>
+            <li class="nav-item " id="oaolink">
+                <a href="" class="nav-link m-3"><i class="fas fa-cog"></i>
+                    Paramètre
+                </a>
+            </li>
+            <li class="nav-item" id="oaolink">
+                <a href="" class="nav-link m-3"><i class="fas fa-question-circle"></i>
 
-    <div class="sidebar-background"></div>
+                    Profil
+                </a>
+            </li>
+        </div>
+        <div class="disconnect m-3">
+            <a class="nav-link inscrire col-md-1 text-center d-flex" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i class="fa-solid fa-power-off mx-1"></i>
+                Déconnexion
+            </a>
+
+            <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
+                @csrf
+            </form>
+        </div>
+    </div>
+    <!-- Sidebar -->
+</div>
+
+<div class="sidebar-background"></div>
 </div>

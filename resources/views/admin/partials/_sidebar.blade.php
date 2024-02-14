@@ -91,9 +91,12 @@
     </a>
     <div id="collapseProducts" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-
             <a class="collapse-item" href="{{ route('produits.index') }}">Tous les produits</a>
-
+            <a class="collapse-item" href="{{ route('produits.index') }}">Vos produits</a>
+            <a class="collapse-item" href="{{ route('produits.index') }}">Produits valide</a>
+            <a class="collapse-item" href="{{ route('produits.index') }}">Produits en attente</a>
+            <a class="collapse-item" href="{{ route('produits.index') }}">Produits non valide</a>
+            <a class="collapse-item" href="{{ route('produits.index') }}">Produits rejeté</a>
         </div>
     </div>
 </li>

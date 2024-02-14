@@ -620,12 +620,10 @@ nav {
 }
 
 /* carrousel */
-
 @media (max-width: 767px) {
     .carousel-inner .carousel-item > div {
         display: none;
     }
-
     .carousel-inner .carousel-item > div:first-child {
         display: block;
     }
@@ -662,12 +660,14 @@ nav {
 
 .infodetail {
     width: 40%;
-    padding: 20px 50px;
-    height: max-content;
-    background: #f1f1f1;
+    padding: 0px 50px;
+    background: #F1F1F1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .infodetail h1 {
@@ -706,9 +706,10 @@ nav {
     font-size: 22px;
     font-feature-settings: "liga" off, "kern" off;
 }
-.infodetail .icone h3 {
-    font-size: 22px;
-    font-weight: 700;
+
+.infodetail .icone h3 i{
+font-size: 22px;
+font-weight: 700;
 }
 
 .infodetail .liens {
@@ -716,7 +717,6 @@ nav {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
     padding: 0px 20px;
-    display: inline-block;
 }
 .infodetail .liens a {
     font-family: "Inria Sans";
@@ -748,12 +748,14 @@ nav {
     line-height: 57px;
     transform: rotate(0.08deg);
 }
-.apercu img {
-    width: 40%;
+.apercu img{
+    width: 50%;
     height: 400px;
     box-sizing: border-box;
     border: 0.5px solid #d9d9d9;
     border-radius: 5px;
+    box-shadow: 1px 1px 2px 2px #d9d9d9;
+
 }
 .apercu p,
 .aproposvendeur .textevendeur p {
@@ -890,22 +892,23 @@ footer .row a {
 /* bienvenue.blade.php */
 #connexionpage {
     /* background: url("../images/Unionbackground.png") no-repeat; */
-    background-size: cover;
+    /* background-size: cover; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
 }
 
 .connexion,
 .usernameconfirm,
 .otpconfirm {
-    width: max-content;
-    padding: 50px 50px;
-    margin: 0 auto;
+    width: auto;
+    padding:30px 50px;
     text-align: center;
-    box-sizing: border-box;
     background: #ffffff;
     border: 1px solid #aaaaaa;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    margin-top: 5%;
 }
 
 .otpconfirm .prompt p {

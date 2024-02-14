@@ -59,8 +59,7 @@ class RegisteredUserController extends Controller
         try {
             Mail::to($user->email)
                 ->send(new SendOtp($CodeOtp));
-                event(new Registered($user));
-
+              //  event(new Registered($user));
                 return redirect()->route('verify-otp', ['id' => $user->id]);
 
         } catch (\Exception $e) {

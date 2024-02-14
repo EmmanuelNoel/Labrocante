@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="fr" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable" data-theme="default" data-theme-colors="default">
 
@@ -35,35 +34,35 @@
     <div id="layout-wrapper">
 
         <header id="page-topbar">
-            
-                @include('users.partials.header')
-            
+
+            @include('users.partials.header')
+
         </header>
 
-<div id="removeNotificationModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="NotificationModalbtn-close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="mt-2 text-center">
-                    <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
-                    <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
-                        <h4>Are you sure ?</h4>
-                        <p class="text-muted mx-4 mb-0">Are you sure you want to remove this Notification ?</p>
+        <div id="removeNotificationModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="NotificationModalbtn-close"></button>
                     </div>
-                </div>
-                <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
-                    <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn w-sm btn-danger" id="delete-notification">Yes, Delete It!</button>
-                </div>
-            </div>
+                    <div class="modal-body">
+                        <div class="mt-2 text-center">
+                            <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
+                            <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
+                                <h4>Are you sure ?</h4>
+                                <p class="text-muted mx-4 mb-0">Are you sure you want to remove this Notification ?</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                            <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn w-sm btn-danger" id="delete-notification">Yes, Delete It!</button>
+                        </div>
+                    </div>
 
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div>
-       @include('users.partials.sidebar')
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+        @include('users.partials.sidebar')
         <div class="vertical-overlay"></div>
         <div class="main-content">
 
@@ -147,7 +146,7 @@
                                             <div class="card-body">
                                                 <div class="d-flex align-items-center">
                                                     <div class="flex-grow-1 overflow-hidden">
-                                                     <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Orders</p>
+                                                        <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Orders</p>
                                                     </div>
                                                     <div class="flex-shrink-0">
                                                         <h5 class="text-danger fs-14 mb-0">
@@ -1096,8 +1095,7 @@
                                                                     <div class="flex-grow-1 ms-3">
                                                                         <div>
                                                                             <p class="text-muted mb-1 fst-italic text-truncate-two-lines"> " Great product and looks great, lots of features. "</p>
-                                                                            <div
-                                                                                class="fs-11 align-middle text-warning">
+                                                                            <div class="fs-11 align-middle text-warning">
                                                                                 <i class="ri-star-fill"></i>
                                                                                 <i class="ri-star-fill"></i>
                                                                                 <i class="ri-star-fill"></i>
@@ -1354,7 +1352,9 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Velzon.
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © Velzon.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
@@ -1365,7 +1365,7 @@
                 </div>
             </footer>
         </div>
-     
+
 
     </div>
     <!-- END layout-wrapper -->
@@ -2346,5 +2346,4 @@
     <script src="{{ asset('users/assets/js/app.js')}}"></script>
     <script src="https://kit.fontawesome.com/3a537738e0.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
