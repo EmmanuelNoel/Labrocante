@@ -59,7 +59,7 @@
                 <li class="menu-title text-center"><span data-key="t-menu">Tableau de bord</span></li>
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-                        <span data-key="t-dashboards">Historiques</span>
+                        <span data-key="t-dashboards"><i class="fa-solid fa-rotate"></i>Historiques</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarDashboards">
                         <ul class="nav nav-sm flex-column">
@@ -80,7 +80,7 @@
                 </li> <!-- end Dashboard Menu -->
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarApps">
-                        <span data-key="t-apps">Statistiques</span>
+                        <span data-key="t-apps"><i class="fa-solid fa-chart-simple"></i> Statistiques</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarApps">
                         <ul class="nav nav-sm flex-column">
@@ -100,11 +100,11 @@
                         </ul>
                     </div>
                 <li class="nav-item">
-                    <a href="apps-chat.html" class="nav-link" data-key="t-chat"> Services </a>
+                    <a href="apps-chat.html" class="nav-link" data-key="t-chat"><i class="fa-brands fa-digital-ocean"></i> Services </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="apps-chat.html" class="nav-link" data-key="t-chat"> Chat </a>
+                    <a href="apps-chat.html" class="nav-link" data-key="t-chat"><i class="fa-solid fa-comment"></i> Chat </a>
                 </li>
             </ul>
         </div>

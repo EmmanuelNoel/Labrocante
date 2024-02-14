@@ -3312,9 +3312,9 @@
     transition: all 0.1s ease-out;
 }
 @media (max-width: 767.98px) {
-    .navbar-brand-box {
+    /* .navbar-brand-box {
         display: none;
-    }
+    } */
 }
 .hamburger-icon {
     width: 20px;
@@ -3479,13 +3479,13 @@
     padding: 0;
 }
 @media (max-width: 767.98px) {
-    :is([data-layout="vertical"], [data-layout="semibox"]) .navbar-brand-box {
+    /* :is([data-layout="vertical"], [data-layout="semibox"]) .navbar-brand-box {
         display: none;
-    }
+    } */
 }
-:is([data-layout="vertical"], [data-layout="semibox"]) .horizontal-logo {
+/* :is([data-layout="vertical"], [data-layout="semibox"]) .horizontal-logo {
     display: none;
-}
+} */
 :is(
         [data-layout="vertical"],
         [data-layout="semibox"]
@@ -18937,6 +18937,7 @@ span.flatpickr-weekday {
 .menu-title {
     font-size: 15px;
 }
+
 .compte {
     position: relative;
     top: 10px;
@@ -18951,12 +18952,14 @@ span.flatpickr-weekday {
     list-style: none !important;
 }
 .compte H4 {
-    font-size: 16px;
+    font-size: 18px;
     color: #000;
+    font-weight: 700!important;
 }
 .disconnect {
     position: relative;
     top: 15px;
+    font-size: 15px;
 }
 .navbar-menu .navbar-nav .nav-sm .nav-link:hover {
     background: #1f263e;
@@ -18972,7 +18975,11 @@ span.flatpickr-weekday {
 .fa-cog,
 .fa-bell,
 .fa-question-circle,
-.fa-power-off {
+.fa-power-off,
+.fa-rotate,
+.fa-chart-simple,
+.fa-digital-ocean,
+.fa-comment{
     font-size: 21px;
     color: #1f263e;
 }
