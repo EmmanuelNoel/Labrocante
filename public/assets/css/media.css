@@ -13,7 +13,6 @@
 
 }
 
-@media (min-width: 1200px) and (max-width: 1400px) {}
 
 @media (max-width: 1200px) {
 
@@ -34,19 +33,33 @@
         margin-left: 1rem;
     }
 
+    /* details-produits */
+    .aproposvendeur .col-3{
+        width:30%;
+    }
+    .aproposvendeur .col-9{
+        width: 65%;
+    }
+    .apercu p,.aproposvendeur .textevendeur p,.description_service p,.infodetail p{
+        font-size: 17px;
+    }
+    .ficheproduit,footer .container{
+        max-width: 90% !important;
+    }
+    .infodetail .line{
+        margin:20px 0px;
+    }
 }
 
-@media (min-width: 960px) and (max-width: 1200px) {}
 
 @media (max-width: 991px) {
 
     /* nav */
-    .container {
+    /* .container {
         max-width: 90% !important;
         padding-right: 0 !important;
         padding-left: 0 !important;
-    }
-
+    } */
     .search-item {
         width: auto;
     }
@@ -87,6 +100,36 @@
         font-size: 22px;
     }
 
+    /* detail-produit */
+    .detailproduit{
+        display: flex;
+        flex-direction: column;
+    }
+    .infodetail,.infoproduit {
+        width:100%;
+    }
+    .infodetail{
+        margin-top: 3%;
+        height: max-content;
+        padding: 50px 50px;
+    }
+    .apercu img{
+        width: 70%;
+    }
+}
+@media(max-width:970px){
+    .aproposvendeur .col-3{
+        width:40%;
+    }
+    .aproposvendeur .col-9{
+        width: 60%;
+    }
+    .apercu p,.aproposvendeur .textevendeur p,.description_service p,.infodetail p ,.aproposvendeur .infovendeur p{
+        font-size: 16px;
+    }
+    .aproposvendeur .infovendeur h3{
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -120,9 +163,32 @@
         margin-top: 20px;
     }
 
-    /* produots */
+    /* dtails-produits */
+    .apercu img{
+        width: 100%;
+    }
+    .infodetail h1 {
+        font-size: 22px;
+    }
+    .apercu h2,.aproposvendeur H2{
+        font-size: 25px;
+    }
+    .apercu p,.aproposvendeur .textevendeur p,.description_service p,.infodetail p,.aproposvendeur .infovendeur p {
+        font-size: 14px;
+    }
+    .aproposvendeur .infovendeur h3{
+        font-size: 17px;
+    }
 }
-
+@media(max-width:650px){
+    .aproposvendeur .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .aproposvendeur .col-3,.aproposvendeur .col-9{
+        width:100%;
+    }
+}
 @media(max-width:600px) {
     .square {
         height: 350px;
@@ -167,6 +233,14 @@
     }
 
     /* connexion */
+
+    /* detailproduit */
+    .infodetail .tarifunique {
+        font-size: 15px;
+    }
+    .infodetail .icone h3 i,.infodetail .prix h3{
+        font-size: 20px;
+    }
 }
 
 /* footer */

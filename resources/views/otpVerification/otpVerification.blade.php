@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
-    <section id="connexionpage" class="d-flex align-items-center justify-content-center">
-        <div class="otpconfirm mt-5  container">
+    <section id="connexionpage">
+        <div class="otpconfirm  container">
             <div>
                 {{-- <h2 style="margin: 0">Vérification</h2> --}}
                 {{-- <form action="{{ route('login') }}" method="POST">
@@ -43,9 +43,9 @@
 
                     <div class="d-flex justify-content-center">
 
-                        <p class="text-center mt-4 fs-4">
+                        <p class="text-center mt-4 fs-5">
                             Vous n'avez pas reçu de code otp ? &nbsp;<a href="{{ route('sendOtpCode', ['id' => $id]) }}" style="color: #274060;
-                            font-size: 25px;font-weight: 700;line-height: 24px;letter-spacing: 0em;">Renvoyer</a>
+                            font-size: 20px;font-weight: 700;line-height: 24px;letter-spacing: 0em;">Renvoyer</a>
                         </p>
                     </div>
                     <button type="submit" class="btn">Envoyer</button>

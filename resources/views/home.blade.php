@@ -19,7 +19,7 @@
                 <div class="produit">
                     <div class="contentproduit">
                         <div class="square">
-                            <a href="{{ route('detailproduit') }}">
+                            <a href="{{ route('detailproduit', ['id' => $produit_recent->id  ]) }}">
                                 @if ($produit_recent->medias->count() > 0)
                                     <img src="{{ asset('storage/' . $produit_recent->medias[0]->path) }}"
                                         alt="{{ $produit_recent->medias[0]->nom }}">
