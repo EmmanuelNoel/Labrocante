@@ -17,7 +17,10 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): View
     {
-        return view('users.profile.profile_edit', [
+
+         $data = $request->user()->with('media')->first();
+         //dd($data);
+        return view('users.profile.edit', [
             'user' => $request->user(),
         ]);
     }
@@ -34,6 +37,15 @@ class ProfileController extends Controller
         }
 
         $request->user()->save();
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $name = $image->getClientOriginalName();
+            $imagePath = $image->store('userMedias', 'public');
+            $request->user()->media()->create([
+                'nom' => $name,
+                'path' => $imagePath]);
+        }
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }

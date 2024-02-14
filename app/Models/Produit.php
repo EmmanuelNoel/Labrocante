@@ -30,7 +30,7 @@ class Produit extends Model
 
     public function category() : HasOne
     {
-        return $this->hasOne(CategoryProduct::class, 'id', 'category_product_id');
+        return $this->hasOne(CategoryProduct::class, 'category_product_id', 'id');
     }
 
     public function medias() : HasMany
@@ -40,12 +40,12 @@ class Produit extends Model
 
     public function status() : HasOne
     {
-        return $this->hasOne(ProduitStatus::class, 'id', 'produit_status_id');
+        return $this->hasOne(ProduitStatus::class,'produit_status_id', 'id');
     }
 
     public function author() : HasOne
     {
-        return $this->hasOne(User::class, 'id', 'user_id');
+        return $this->hasOne(User::class, 'user_id', 'id');
     }
 
 }

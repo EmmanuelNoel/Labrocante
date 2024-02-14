@@ -23,6 +23,6 @@ class ProduitStatus extends Model
 
     public function produit() : BelongsTo
     {
-        return $this->belongsTo(Produit::class, 'produit_status_id', 'id');
+        return $this->belongsTo(Produit::class);
     }
 }

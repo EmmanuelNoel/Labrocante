@@ -27,6 +27,8 @@
     <!-- custom Css-->
     <link href="{{ asset('users/assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
 
+    <link rel="stylesheet" href="{{ asset('users/assets/css/style.css') }}">
+
 </head>
 
 <body>
