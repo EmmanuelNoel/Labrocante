@@ -3209,7 +3209,7 @@
     color: var(--vz-vertical-menu-item-hover-color);
     fill: rgba(64, 81, 137, 0.16);
 }
-.navbar-menu .navbar-nav .nav-link[data-bs-toggle="collapse"]:after {
+/* .navbar-menu .navbar-nav .nav-link[data-bs-toggle="collapse"]:after {
     display: block;
     content: "\f078";
     font-family: "Material Design Icons";
@@ -3222,7 +3222,7 @@
     position: absolute;
     right: 18px;
     color: inherit;
-}
+} */
 /* .navbar-menu
     .navbar-nav
     .nav-link[data-bs-toggle="collapse"][aria-expanded="true"] {
@@ -18988,5 +18988,21 @@ span.flatpickr-weekday {
 .nav-item:hover .fa-question-circle ,
 .nav-item:hover .fa-power-off{
     color: #fff;
+}
+.nav-item{
+    position:relative;
+}
+.nav-item a span .fa-chevron-down{
+    position: absolute;
+    right: 5px;
+    top: 14px;
+    transition: all 0.2s ease-in-out;
+}
+.nav-item a span .fa-chevron-down:hover{
+    transition: rotation 0.2s linear;
+}
+.rote{
+    transform: rotateX(178deg) !important;
+    transition: all 0.2s ease-in-out;
 }
 /*# sourceMappingURL=app.min.css.map */

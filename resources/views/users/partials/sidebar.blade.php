@@ -58,8 +58,9 @@
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="menu-title text-center"><span data-key="t-menu">Tableau de bord</span></li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-                        <span data-key="t-dashboards"><i class="fa-solid fa-rotate"></i>Historiques</span>
+                    <a class="nav-link menu-link" href="#sidebarDashboards" onclick="cheche()" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                        <span data-key="t-dashboards" id="elementenfant"><i class="fa-solid fa-rotate"></i>Historiques <span><i class="fas fa-chevron-down custom-arrow" id="flecherr1"></i>
+                            </span></span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarDashboards">
                         <ul class="nav nav-sm flex-column">
@@ -79,8 +80,9 @@
                     </div>
                 </li> <!-- end Dashboard Menu -->
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarApps">
-                        <span data-key="t-apps"><i class="fa-solid fa-chart-simple"></i> Statistiques</span>
+                    <a class="nav-link menu-link" href="#sidebarApps" onclick="cheche2()" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarApps">
+                        <span data-key="t-apps" id="elementenfant2"><i class="fa-solid fa-chart-simple"></i> Statistiques <span><i class="fas fa-chevron-down custom-arrow" id="flecherr2"></i>
+                            </span></span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarApps">
                         <ul class="nav nav-sm flex-column">
@@ -142,6 +144,28 @@
     </div>
     <!-- Sidebar -->
 </div>
+<script>
+    // Event for the arrow of slidebar
+    let elementenfant = document.getElementById("elementenfant");
+    let elementenfant2= document.getElementById('elementenfant2');
 
+    function cheche(){
+     let flecherr1= document.getElementById('flecherr1');
+     flecherr1.classList.toggle('rote');
+     elementenfant.addEventListener('click',()=>{
+        let flecherr= document.getElementById('flecherr');
+        flecherr.classList.toggle('rote');
+     })
+    };
+    function cheche2(){
+     let flecherr2= document.getElementById('flecherr2');
+     flecherr2.classList.toggle('rote');
+     elementenfant2.addEventListener('click',()=>{
+        let flecherr2= document.getElementById('flecherr2');
+        flecherr2.classList.toggle('rote');
+     })
+    };
+
+</script>
 <div class="sidebar-background"></div>
 </div>
