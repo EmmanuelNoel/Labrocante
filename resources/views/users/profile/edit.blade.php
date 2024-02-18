@@ -24,6 +24,11 @@
             <p class="profile_edit_autre">
              Sécurité du compte
             </p>
+            <header>
+                <p class="text-sm text-center">
+                    {{ __('Ensure your account is using a long, random password to stay secure.') }}
+                </p>
+            </header>
         </div>
 
         @include('users.profile.partials.update-password-form')

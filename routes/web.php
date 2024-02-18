@@ -47,7 +47,6 @@ Route::get('panier', function () {
 })->name('panier');
 
 // Newsletters
-//Route::get('/subscribers', [NewSubscriberController::class, 'create'])->name('subscribers.store');
 Route::post('/subscribers', [NewSubscriberController::class, 'store'])->name('subscribers.store');
 
 // Otp routes
